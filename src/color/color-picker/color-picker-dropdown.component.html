@@ -29,8 +29,8 @@
         </div>
       </ng-container>
     </div>
-    <mat-icon class="color-picker__arrow" *ngIf="arrowUp" fontIcon="home"></mat-icon>
-    <mat-icon class="color-picker__arrow" *ngIf="!arrowUp" fontIcon="home"></mat-icon>
+    <mat-icon [ngStyle]="{'color': 'white'}" class="color-picker__arrow" *ngIf="arrowUp" fontIcon="home"></mat-icon>
+    <mat-icon [ngStyle]="{'color': 'white'}" class="color-picker__arrow" *ngIf="!arrowUp" fontIcon="home"></mat-icon>
   </button>
   <div
     ngbDropdownMenu

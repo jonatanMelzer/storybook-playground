@@ -4,13 +4,20 @@ import { ColorModel } from '../model/color.model';
 import { TextColorModel, TextColorUpdateType } from '../model/text-color.model';
 import { ColorsGridComponent } from '../colors-grid/colors-grid.component';
 import { ColorsThemeGridComponent } from '../colors-theme-grid/colors-theme-grid.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-color-picker-dropdown',
   templateUrl: './color-picker-dropdown.component.html',
   styleUrls: ['./color-picker-dropdown.component.scss'],
   standalone: true,
-  imports: [ColorsGridComponent, ColorsThemeGridComponent],
+  imports: [
+    CommonModule,
+    ColorsGridComponent, 
+    ColorsThemeGridComponent, 
+    NgbDropdownModule,
+  ],
 })
 export class TextColorPickerDropdownComponent implements OnInit, OnChanges {
   @Input() text!: TextColorModel;

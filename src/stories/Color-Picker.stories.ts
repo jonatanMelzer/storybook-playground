@@ -16,13 +16,13 @@ type Story = StoryObj<TextColorPickerDropdownComponent>;
 
 const textModel = new TextColorModel(
     TextColorUpdateType.Font, 
-    [new ColorModel('#A4A5A7', false)]
+    [new ColorModel('#A4A5A7', true), new ColorModel('#00000', false)]
     );
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const ColorPicker: Story = {
   args: {
     text: textModel,
-    titleKey: 'test',
+    titleKey: 'Color',
   },
 };
 
