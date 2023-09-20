@@ -3,7 +3,7 @@
   class="color-picker d-inline-block"
   (openChange)="onOpenChange($event)"
 >
-  <label class="color-picker__title">{{ titleKey | translate }}</label>
+  <label class="color-picker__title">{{ titleKey }}</label>
   <button
     type="button"
     class="btn color-picker__btn-outline-primary color-picker__dropdown-toggle"
@@ -29,12 +29,8 @@
         </div>
       </ng-container>
     </div>
-    <div
-      class="color-picker__arrow"
-      [ngClass]="
-        arrowUp ? 'ifolor-icon-font-arrow-up' : 'ifolor-icon-font-arrow-down'
-      "
-    ></div>
+    <mat-icon class="color-picker__arrow" *ngIf="arrowUp" fontIcon="home"></mat-icon>
+    <mat-icon class="color-picker__arrow" *ngIf="!arrowUp" fontIcon="home"></mat-icon>
   </button>
   <div
     ngbDropdownMenu
