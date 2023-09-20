@@ -1,0 +1,16 @@
+<div class="color-theme">
+  <app-checkmark
+    *ngIf="color.isSelected"
+    class="color-theme__checkmark"
+  ></app-checkmark>
+  <div
+    class="color-theme__square"
+    [ngStyle]="{
+      color: color.color,
+      'background-color': color.backgroundColor
+    }"
+    (click)="selected.emit(color)"
+  >
+    <span>{{ text }}</span>
+  </div>
+</div>

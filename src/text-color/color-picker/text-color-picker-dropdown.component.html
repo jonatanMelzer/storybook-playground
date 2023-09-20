@@ -1,0 +1,57 @@
+<div
+  ngbDropdown
+  class="color-picker d-inline-block"
+  (openChange)="onOpenChange($event)"
+>
+  <label class="color-picker__title">{{ titleKey | translate }}</label>
+  <button
+    type="button"
+    class="btn color-picker__btn-outline-primary color-picker__dropdown-toggle"
+    id="colorpalette"
+    ngbDropdownToggle
+  >
+    <div class="color-picker__selected">
+      <ng-container [ngSwitch]="text.updateType">
+        <div
+          *ngSwitchCase="TextColorUpdateType.Font"
+          class="color-picker__selected-square"
+          [ngStyle]="{ 'background-color': selectedColor?.color }"
+        ></div>
+        <div
+          *ngSwitchCase="TextColorUpdateType.Theme"
+          class="color-picker__selected-square"
+          [ngStyle]="{
+            color: selectedColor?.color,
+            'background-color': selectedColor?.backgroundColor
+          }"
+        >
+          <span>Aa</span>
+        </div>
+      </ng-container>
+    </div>
+    <div
+      class="color-picker__arrow"
+      [ngClass]="
+        arrowUp ? 'ifolor-icon-font-arrow-up' : 'ifolor-icon-font-arrow-down'
+      "
+    ></div>
+  </button>
+  <div
+    ngbDropdownMenu
+    aria-labelledby="colorpalette"
+    class="color-picker__dropdown-menu"
+  >
+    <ng-container [ngSwitch]="text.updateType">
+      <app-colors-grid
+        *ngSwitchCase="TextColorUpdateType.Font"
+        [colors]="text.colors"
+        (selected)="onSelectedColor($event)"
+      ></app-colors-grid>
+      <app-colors-theme-grid
+        *ngSwitchCase="TextColorUpdateType.Theme"
+        [colors]="text.colors"
+        (selected)="onSelectedColor($event)"
+      ></app-colors-theme-grid>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="colors-container">
+  <div class="d-grid colors-container__galery">
+    <div
+      *ngFor="let color of colors"
+      class="col-auto px-0 colors-container__button"
+    >
+      <app-color-theme-button
+        [color]="color"
+        (selected)="select($event)"
+      ></app-color-theme-button>
+    </div>
+  </div>
+</div>
