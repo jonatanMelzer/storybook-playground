@@ -2,6 +2,53 @@
     "pipes": [],
     "interfaces": [
         {
+            "name": "IColor",
+            "id": "interface-IColor-9e55dd970458aa36007fb193b80143630d817ae2efb4032cd315de0c5e4d19ce10e564353363ad3b2288bb199c0a340ca29739c11f30495bdb4cf985c1e041ab",
+            "file": "src/color/model/color.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface IColor {\r\n    color: string;\r\n}\r\n\r\nexport class ColorModel implements IColor {\r\n    color: string;\r\n    isSelected: boolean;\r\n\r\n    constructor(color: string, isSelected: boolean) {\r\n        this.color = color;\r\n        this.isSelected = isSelected;\r\n    }\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
+            "name": "IColorTheme",
+            "id": "interface-IColorTheme-e266c087faa0ad69210b210c0e9241d90ef207b07a7766b7ef5afc0338b01cfa903b26bdac094753ef39171bd80081703d428f9d05a06d2ba3d8e8462b985c99",
+            "file": "src/color/model/color-theme.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { IColor } from './color.model';\r\n\r\nexport interface IColorTheme extends IColor {\r\n    backgroundColor: string;\r\n}\r\n\r\nexport class ColorThemeModel implements IColorTheme {\r\n    color: string;\r\n    backgroundColor: string;\r\n    isSelected: boolean;\r\n\r\n    constructor(color: string, backgroundColor: string, isSelected: boolean) {\r\n        this.color = color;\r\n        this.backgroundColor = backgroundColor;\r\n        this.isSelected = isSelected;\r\n    }\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": [],
+            "extends": "IColor"
+        },
+        {
             "name": "User",
             "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
             "file": "src/stories/User.ts",
@@ -17,7 +64,266 @@
     "injectables": [],
     "guards": [],
     "interceptors": [],
-    "classes": [],
+    "classes": [
+        {
+            "name": "ColorModel",
+            "id": "class-ColorModel-9e55dd970458aa36007fb193b80143630d817ae2efb4032cd315de0c5e4d19ce10e564353363ad3b2288bb199c0a340ca29739c11f30495bdb4cf985c1e041ab",
+            "file": "src/color/model/color.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export interface IColor {\r\n    color: string;\r\n}\r\n\r\nexport class ColorModel implements IColor {\r\n    color: string;\r\n    isSelected: boolean;\r\n\r\n    constructor(color: string, isSelected: boolean) {\r\n        this.color = color;\r\n        this.isSelected = isSelected;\r\n    }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "color",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "isSelected",
+                        "type": "boolean",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 7,
+                "jsdoctags": [
+                    {
+                        "name": "color",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "isSelected",
+                        "type": "boolean",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "isSelected",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "implements": [
+                "IColor"
+            ]
+        },
+        {
+            "name": "ColorThemeModel",
+            "id": "class-ColorThemeModel-e266c087faa0ad69210b210c0e9241d90ef207b07a7766b7ef5afc0338b01cfa903b26bdac094753ef39171bd80081703d428f9d05a06d2ba3d8e8462b985c99",
+            "file": "src/color/model/color-theme.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { IColor } from './color.model';\r\n\r\nexport interface IColorTheme extends IColor {\r\n    backgroundColor: string;\r\n}\r\n\r\nexport class ColorThemeModel implements IColorTheme {\r\n    color: string;\r\n    backgroundColor: string;\r\n    isSelected: boolean;\r\n\r\n    constructor(color: string, backgroundColor: string, isSelected: boolean) {\r\n        this.color = color;\r\n        this.backgroundColor = backgroundColor;\r\n        this.isSelected = isSelected;\r\n    }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "color",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "backgroundColor",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "isSelected",
+                        "type": "boolean",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "color",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "backgroundColor",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "isSelected",
+                        "type": "boolean",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "isSelected",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "implements": [
+                "IColorTheme"
+            ]
+        },
+        {
+            "name": "TextColorModel",
+            "id": "class-TextColorModel-b400abb364740879ecc466ac4759dedd955060937f04357a708d34de20a3c06072fa85f6224591d257e7e8ff9389fb14d359ebf617da83e83b1211d507d62e0d",
+            "file": "src/color/model/text-color.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { ColorThemeModel } from \"./color-theme.model\";\r\nimport { ColorModel } from \"./color.model\";\r\n\r\nexport enum TextColorUpdateType {\r\n    Font = 'Font',\r\n    Theme = 'Theme'\r\n}\r\n\r\nexport class TextColorModel {\r\n    updateType: TextColorUpdateType;\r\n    colors: (ColorModel | ColorThemeModel)[];\r\n\r\n    constructor(updateType: TextColorUpdateType, colors: (ColorModel | ColorThemeModel)[]) {\r\n        this.updateType = updateType;\r\n        this.colors = colors;\r\n    }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "updateType",
+                        "type": "TextColorUpdateType",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "colors",
+                        "type": "(ColorModel | ColorThemeModel)[]",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 11,
+                "jsdoctags": [
+                    {
+                        "name": "updateType",
+                        "type": "TextColorUpdateType",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "colors",
+                        "type": "(ColorModel | ColorThemeModel)[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "colors",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "(ColorModel | ColorThemeModel)[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "updateType",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TextColorUpdateType",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
     "directives": [],
     "components": [
         {
@@ -72,7 +378,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<router-outlet></router-outlet>"
+            "templateData": "Angular + Storybook ng run storybook:storybook\n<router-outlet></router-outlet>"
         },
         {
             "name": "ButtonComponent",
@@ -205,6 +511,332 @@
                     }
                 }
             }
+        },
+        {
+            "name": "ColorButtonComponent",
+            "id": "component-ColorButtonComponent-254be6f01389181aea52a024881ac7ef67595cd405cbccf0aff36d9469c9a1c6de5eeef84658798acfe9b3d2c068d37ebe604ef432d6cbbe2eb7c9dfa5657df3",
+            "file": "src/color/color-button/color-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-color-button",
+            "styleUrls": [
+                "./color-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./color-button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "ColorModel | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "isSelected",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selected",
+                    "defaultValue": "new EventEmitter<ColorModel>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorModel } from '../model/color.model';\r\n\r\n@Component({\r\n  selector: 'app-color-button',\r\n  templateUrl: './color-button.component.html',\r\n  styleUrls: ['./color-button.component.scss']\r\n})\r\nexport class ColorButtonComponent {\r\n  @Input() color: ColorModel | undefined;\r\n  @Input() isSelected: boolean = false;\r\n  @Output() selected = new EventEmitter<ColorModel>();\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    top: -0.25rem;\r\n    right: -0.25rem;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}\r\n\r\n@include media-breakpoint-up(sm) {\r\n  @media screen and (orientation: landscape) {\r\n    .color {\r\n      &__square {\r\n        width: 1.68rem;\r\n        height: 1.68rem;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./color-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"color\">\r\n  <app-checkmark\r\n    *ngIf=\"isSelected\"\r\n    class=\"color__checkmark\"\r\n  ></app-checkmark>\r\n  <div\r\n    class=\"color__square\"\r\n    [ngStyle]=\"{ 'background-color': color.color }\"\r\n    (click)=\"selected.emit(color)\"\r\n  ></div>\r\n</div>\r\n"
+        },
+        {
+            "name": "ColorsGridComponent",
+            "id": "component-ColorsGridComponent-95f11639dcee2a85f1e808ebb06b4d0b80e67e4b8a8d533fc7746c648866ae1888162dc5bf2e4eb19dd73184c422191e62fd28b3df8b906ba0abc8d0e11d473b",
+            "file": "src/color/colors-grid/colors-grid.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-colors-grid",
+            "styleUrls": [
+                "./colors-grid.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./colors-grid.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "colors",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "Array<ColorModel> | undefined",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selected",
+                    "defaultValue": "new EventEmitter<ColorModel>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "select",
+                    "args": [
+                        {
+                            "name": "selected",
+                            "type": "ColorModel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "selected",
+                            "type": "ColorModel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorModel } from '../model/color.model';\r\n\r\n@Component({\r\n  selector: 'app-colors-grid',\r\n  templateUrl: './colors-grid.component.html',\r\n  styleUrls: ['./colors-grid.component.scss'],\r\n  standalone: true\r\n})\r\nexport class ColorsGridComponent {\r\n  @Input() colors: Array<ColorModel> | undefined;\r\n  @Output() selected = new EventEmitter<ColorModel>();\r\n\r\n  protected select(selected: ColorModel): void {\r\n    this.colors?.forEach(c => {\r\n      if (c.color === selected.color) {\r\n        c.isSelected = true;\r\n      }\r\n      else {\r\n        c.isSelected = false;\r\n      }\r\n    });\r\n\r\n    this.selected.emit(selected);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.colors-container {\r\n  &__galery {\r\n    gap: 0.5rem;\r\n    grid-template-columns: repeat(8, 1fr);\r\n  }\r\n}\r\n\r\n@include media-breakpoint-up(sm) {\r\n  @media screen and (orientation: landscape) {\r\n    .colors-container {\r\n      &__galery {\r\n        margin: 0rem;\r\n      }\r\n    }\r\n  }\r\n}",
+                    "styleUrl": "./colors-grid.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"colors-container\">\r\n  <div class=\"d-grid colors-container__galery\">\r\n    <div\r\n      *ngFor=\"let color of colors\"\r\n      class=\"col-auto px-0 colors-container__button\"\r\n    >\r\n      <app-color-button\r\n        [color]=\"color\"\r\n        [isSelected]=\"color.isSelected\"\r\n        (selected)=\"select($event)\"\r\n      ></app-color-button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "ColorsThemeGridComponent",
+            "id": "component-ColorsThemeGridComponent-4336c3aebc97a9a8a9dc0f706fda2dc856319e5181174c277ef30308188b59e04f10cf005c34927e54d03cd49d36c51bcc75dce5f17da7aafe9eaa5fc20453d7",
+            "file": "src/color/colors-theme-grid/colors-theme-grid.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-colors-theme-grid",
+            "styleUrls": [
+                "./colors-theme-grid.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./colors-theme-grid.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "colors",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "Array<ColorThemeModel> | undefined",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selected",
+                    "defaultValue": "new EventEmitter<ColorThemeModel>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "select",
+                    "args": [
+                        {
+                            "name": "selected",
+                            "type": "ColorThemeModel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "selected",
+                            "type": "ColorThemeModel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorThemeModel } from '../model/color-theme.model';\r\n@Component({\r\n  selector: 'app-colors-theme-grid',\r\n  templateUrl: './colors-theme-grid.component.html',\r\n  styleUrls: ['./colors-theme-grid.component.scss'],\r\n  standalone: true,\r\n})\r\nexport class ColorsThemeGridComponent {\r\n  @Input() colors: Array<ColorThemeModel> | undefined;\r\n  @Output() selected = new EventEmitter<ColorThemeModel>();\r\n\r\n  protected select(selected: ColorThemeModel): void {\r\n    this.colors?.forEach(c => {\r\n      if (c.color === selected.color && c.backgroundColor === selected.backgroundColor) {\r\n        c.isSelected = true;\r\n      }\r\n      else {\r\n        c.isSelected = false;\r\n      }\r\n    });\r\n\r\n    this.selected.emit(selected);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.colors-container {\r\n  &__galery {\r\n    gap: 0.5rem;\r\n    grid-template-columns: repeat(6, 1fr);\r\n  }\r\n}\r\n\r\n@include media-breakpoint-up(sm) {\r\n  @media screen and (orientation: landscape) {\r\n    .colors-container {\r\n      &__galery {\r\n        margin: 0rem;\r\n      }\r\n    }\r\n  }\r\n}",
+                    "styleUrl": "./colors-theme-grid.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"colors-container\">\r\n  <div class=\"d-grid colors-container__galery\">\r\n    <div\r\n      *ngFor=\"let color of colors\"\r\n      class=\"col-auto px-0 colors-container__button\"\r\n    >\r\n      <app-color-theme-button\r\n        [color]=\"color\"\r\n        (selected)=\"select($event)\"\r\n      ></app-color-theme-button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "ColorThemeButtonComponent",
+            "id": "component-ColorThemeButtonComponent-88c1b393b32d3510fee08cc5fafa6758b04938dafd4fc0ac8d817bde4967786501602b895752f96a39a14703b52327c43de71ec9a468862c7c4c75cb2d83a252",
+            "file": "src/color/color-theme-button/color-theme-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-color-theme-button",
+            "styleUrls": [
+                "./color-theme-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./color-theme-button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "ColorThemeModel | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "'Aa'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selected",
+                    "defaultValue": "new EventEmitter<ColorThemeModel>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorThemeModel } from '../model/color-theme.model';\r\n\r\n@Component({\r\n  selector: 'app-color-theme-button',\r\n  templateUrl: './color-theme-button.component.html',\r\n  styleUrls: ['./color-theme-button.component.scss'],\r\n  standalone: true,\r\n})\r\nexport class ColorThemeButtonComponent {\r\n  @Input() color: ColorThemeModel | undefined;\r\n  @Input() text = 'Aa';\r\n  @Output() selected = new EventEmitter<ColorThemeModel>();\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color-theme {\r\n  position: relative;\r\n  font-size: 1.25rem;\r\n\r\n  &__square {\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    display: flex;\r\n    top: -0.25rem;\r\n    right: -0.25rem;\r\n    z-index: 1;\r\n    visibility: visible;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}\r\n\r\n@include media-breakpoint-up(sm) {\r\n  @media screen and (orientation: landscape) {\r\n    .color-theme {\r\n      &__square {\r\n        width: 2.43rem;\r\n        height: 2.43rem;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./color-theme-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"color-theme\">\r\n  <app-checkmark\r\n    *ngIf=\"color.isSelected\"\r\n    class=\"color-theme__checkmark\"\r\n  ></app-checkmark>\r\n  <div\r\n    class=\"color-theme__square\"\r\n    [ngStyle]=\"{\r\n      color: color.color,\r\n      'background-color': color.backgroundColor\r\n    }\"\r\n    (click)=\"selected.emit(color)\"\r\n  >\r\n    <span>{{ text }}</span>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "HeaderComponent",
@@ -364,18 +996,267 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "TextColorPickerDropdownComponent",
+            "id": "component-TextColorPickerDropdownComponent-81b53240292c707e7489bbbb86e9dae7db7ed7c555a3231261dc3170ee11dfb273ba6a88bca3cd42a7a96146c5e8447be35c76f96c81f8c8f678b37606fffd05",
+            "file": "src/color/color-picker/color-picker-dropdown.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-color-picker-dropdown",
+            "styleUrls": [
+                "./color-picker-dropdown.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./color-picker-dropdown.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "TextColorModel",
+                    "decorators": []
+                },
+                {
+                    "name": "titleKey",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "selected",
+                    "defaultValue": "new EventEmitter<ColorModel | ColorThemeModel>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "arrowUp",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "selectedColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ColorModel | ColorThemeModel | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "style",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "TextColorUpdateType",
+                    "defaultValue": "TextColorUpdateType",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        122
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onOpenChange",
+                    "args": [
+                        {
+                            "name": "isOpened",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "isOpened",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onSelectedColor",
+                    "args": [
+                        {
+                            "name": "color",
+                            "type": "ColorModel | ColorThemeModel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        122
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "color",
+                            "type": "ColorModel | ColorThemeModel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setSelectedColor",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ColorsGridComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ColorsThemeGridComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';\r\nimport { ColorThemeModel } from '../model/color-theme.model';\r\nimport { ColorModel } from '../model/color.model';\r\nimport { TextColorModel, TextColorUpdateType } from '../model/text-color.model';\r\nimport { ColorsGridComponent } from '../colors-grid/colors-grid.component';\r\nimport { ColorsThemeGridComponent } from '../colors-theme-grid/colors-theme-grid.component';\r\n\r\n@Component({\r\n  selector: 'app-color-picker-dropdown',\r\n  templateUrl: './color-picker-dropdown.component.html',\r\n  styleUrls: ['./color-picker-dropdown.component.scss'],\r\n  standalone: true,\r\n  imports: [ColorsGridComponent, ColorsThemeGridComponent],\r\n})\r\nexport class TextColorPickerDropdownComponent implements OnInit, OnChanges {\r\n  @Input() text!: TextColorModel;\r\n  @Input() titleKey: string = '';\r\n  @Output() selected = new EventEmitter<ColorModel | ColorThemeModel>();\r\n\r\n  protected TextColorUpdateType = TextColorUpdateType;\r\n  protected selectedColor: ColorModel | ColorThemeModel | undefined;\r\n  protected arrowUp: boolean = false;\r\n  protected style: string = '';\r\n\r\n  ngOnInit(): void {\r\n    this.setSelectedColor();\r\n  }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    if (changes['text']) {\r\n      this.setSelectedColor();\r\n    }\r\n  }\r\n\r\n  protected onOpenChange(isOpened: boolean) {\r\n    this.arrowUp = isOpened;\r\n  }\r\n\r\n  protected onSelectedColor(color: ColorModel | ColorThemeModel) {\r\n    this.selectedColor = color;\r\n    this.selected.emit(this.selectedColor);\r\n  }\r\n\r\n  private setSelectedColor() {\r\n    this.selectedColor = this.text.colors.find(c => c.isSelected);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".color-picker {\r\n  &__title {\r\n    display: block;\r\n    color: white;\r\n    margin-bottom: 0.6rem;\r\n  }\r\n\r\n  &__btn-outline-primary {\r\n    box-shadow: none;\r\n    outline: none;\r\n  }\r\n\r\n  &__selected-square {\r\n    width: 1.68rem;\r\n    height: 1.68rem;\r\n    min-height: 1.55rem;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n    font-size: 0.875rem;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n\r\n  &__arrow {\r\n    color: white;\r\n    font-size: 0.875rem;\r\n  }\r\n\r\n  &__dropdown-menu {\r\n    width: 18.2rem;\r\n    background-color: #303030;\r\n    padding: 0.25rem 0.5rem 0.5rem 0.5rem;\r\n    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.25);\r\n    margin-top: 4px !important;\r\n    inset: 0px 0px auto auto !important;\r\n  }\r\n\r\n  &__dropdown-toggle {\r\n    height: 2.5rem;\r\n    width: 8.5rem;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #2d2d2d;\r\n    border: 0;\r\n\r\n    &::after {\r\n      display: none;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./color-picker-dropdown.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit",
+                "OnChanges"
+            ],
+            "templateData": "<div\r\n  ngbDropdown\r\n  class=\"color-picker d-inline-block\"\r\n  (openChange)=\"onOpenChange($event)\"\r\n>\r\n  <label class=\"color-picker__title\">{{ titleKey }}</label>\r\n  <button\r\n    type=\"button\"\r\n    class=\"btn color-picker__btn-outline-primary color-picker__dropdown-toggle\"\r\n    id=\"colorpalette\"\r\n    ngbDropdownToggle\r\n  >\r\n    <div class=\"color-picker__selected\">\r\n      <ng-container [ngSwitch]=\"text.updateType\">\r\n        <div\r\n          *ngSwitchCase=\"TextColorUpdateType.Font\"\r\n          class=\"color-picker__selected-square\"\r\n          [ngStyle]=\"{ 'background-color': selectedColor?.color }\"\r\n        ></div>\r\n        <div\r\n          *ngSwitchCase=\"TextColorUpdateType.Theme\"\r\n          class=\"color-picker__selected-square\"\r\n          [ngStyle]=\"{\r\n            color: selectedColor?.color,\r\n            'background-color': selectedColor?.backgroundColor\r\n          }\"\r\n        >\r\n          <span>Aa</span>\r\n        </div>\r\n      </ng-container>\r\n    </div>\r\n    <mat-icon class=\"color-picker__arrow\" *ngIf=\"arrowUp\" fontIcon=\"home\"></mat-icon>\r\n    <mat-icon class=\"color-picker__arrow\" *ngIf=\"!arrowUp\" fontIcon=\"home\"></mat-icon>\r\n  </button>\r\n  <div\r\n    ngbDropdownMenu\r\n    aria-labelledby=\"colorpalette\"\r\n    class=\"color-picker__dropdown-menu\"\r\n  >\r\n    <ng-container [ngSwitch]=\"text.updateType\">\r\n      <app-colors-grid\r\n        *ngSwitchCase=\"TextColorUpdateType.Font\"\r\n        [colors]=\"text.colors\"\r\n        (selected)=\"onSelectedColor($event)\"\r\n      ></app-colors-grid>\r\n      <app-colors-theme-grid\r\n        *ngSwitchCase=\"TextColorUpdateType.Theme\"\r\n        [colors]=\"text.colors\"\r\n        (selected)=\"onSelectedColor($event)\"\r\n      ></app-colors-theme-grid>\r\n    </ng-container>\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-b0bb343999c0401a2e3ecbec65490c5a76866396b25cae82ed79702c1d4e115033ea8c8ade9395518e8eba42217f2ec5d6c7a62f3d969b3ab2838fe206d56a66",
+            "id": "module-AppModule-9ad8a04baf0e282a639fd29db64180035666f09de025642570d8050a4f937b9ed7537963d5c64933391e52f8edd6f82fb7298adb95c41120120d2356d27cf10c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport {MatIconModule} from '@angular/material/icon';\nimport { NgbModule } from '@ng-bootstrap/ng-bootstrap';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    MatIconModule,\n    NgbModule,  \n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -518,6 +1399,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Color-Picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TextColorPickerDropdownComponent>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: TextColorPickerDropdownComponent,\n  tags: ['autodocs'],\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -573,6 +1464,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "textModel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Color-Picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "new TextColorModel(TextColorUpdateType.Font, [new ColorModel('red', false)])"
             }
         ],
         "functions": [],
@@ -611,7 +1512,31 @@
                 "kind": 180
             }
         ],
-        "enumerations": [],
+        "enumerations": [
+            {
+                "name": "TextColorUpdateType",
+                "childs": [
+                    {
+                        "name": "Font",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "Font"
+                    },
+                    {
+                        "name": "Theme",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "Theme"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/color/model/text-color.model.ts"
+            }
+        ],
         "groupedVariables": {
             "src/stories/Button.stories.ts": [
                 {
@@ -729,6 +1654,28 @@
                     "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
                 }
             ],
+            "src/stories/Color-Picker.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Color-Picker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TextColorPickerDropdownComponent>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: TextColorPickerDropdownComponent,\n  tags: ['autodocs'],\n}"
+                },
+                {
+                    "name": "textModel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Color-Picker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "new TextColorModel(TextColorUpdateType.Font, [new ColorModel('red', false)])"
+                }
+            ],
             ".storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -743,7 +1690,33 @@
             ]
         },
         "groupedFunctions": {},
-        "groupedEnumerations": {},
+        "groupedEnumerations": {
+            "src/color/model/text-color.model.ts": [
+                {
+                    "name": "TextColorUpdateType",
+                    "childs": [
+                        {
+                            "name": "Font",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "Font"
+                        },
+                        {
+                            "name": "Theme",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "Theme"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/color/model/text-color.model.ts"
+                }
+            ]
+        },
         "groupedTypeAliases": {
             "src/stories/Button.stories.ts": [
                 {
@@ -801,7 +1774,7 @@
         ]
     },
     "coverage": {
-        "count": 4,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -821,6 +1794,96 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/color-button/color-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/color-picker/color-picker-dropdown.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextColorPickerDropdownComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/color-theme-button/color-theme-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorThemeButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/colors-grid/colors-grid.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorsGridComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/colors-theme-grid/colors-theme-grid.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorsThemeGridComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/model/color-theme.model.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "ColorThemeModel",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/model/color-theme.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IColorTheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/model/color.model.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "ColorModel",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/model/color.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IColor",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/color/model/text-color.model.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "TextColorModel",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -869,6 +1932,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Color-Picker.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Color-Picker.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "textModel",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
