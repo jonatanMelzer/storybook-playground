@@ -1,16 +1,16 @@
 import { ColorThemeModel } from "./color-theme.model";
 import { ColorModel } from "./color.model";
 
-export enum TextColorUpdateType {
+export enum ColorUpdateType {
     Font = 'Font',
     Theme = 'Theme'
 }
 
-export class TextColorModel {
-    updateType: TextColorUpdateType;
+export class ColorUpdateModel {
+    updateType: ColorUpdateType;
     colors: (ColorModel | ColorThemeModel)[];
 
-    constructor(updateType: TextColorUpdateType, colors: (ColorModel | ColorThemeModel)[]) {
+    constructor(updateType: ColorUpdateType, colors: (ColorModel | ColorThemeModel)[]) {
         this.updateType = updateType;
         this.colors = colors;
     }

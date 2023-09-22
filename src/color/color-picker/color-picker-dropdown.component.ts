@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ColorThemeModel } from '../model/color-theme.model';
 import { ColorModel } from '../model/color.model';
-import { TextColorModel, TextColorUpdateType } from '../model/text-color.model';
+import { ColorUpdateModel, ColorUpdateType } from '../model/color-update.model';
 import { ColorsGridComponent } from '../colors-grid/colors-grid.component';
 import { ColorsThemeGridComponent } from '../colors-theme-grid/colors-theme-grid.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-color-picker-dropdown',
@@ -17,14 +18,15 @@ import { CommonModule } from '@angular/common';
     ColorsGridComponent, 
     ColorsThemeGridComponent, 
     NgbDropdownModule,
+    MatIconModule
   ],
 })
-export class TextColorPickerDropdownComponent implements OnInit, OnChanges {
-  @Input() text!: TextColorModel;
-  @Input() titleKey: string = '';
+export class ColorPickerDropdownComponent implements OnInit, OnChanges {
+  @Input() model!: ColorUpdateModel;
+  @Input() label: string = '';
   @Output() selected = new EventEmitter<ColorModel | ColorThemeModel>();
 
-  protected TextColorUpdateType = TextColorUpdateType;
+  protected ColorUpdateType = ColorUpdateType;
   protected selectedColor: ColorModel | ColorThemeModel | undefined;
   protected arrowUp: boolean = false;
   protected style: string = '';
@@ -34,7 +36,7 @@ export class TextColorPickerDropdownComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['text']) {
+    if (changes['model']) {
       this.setSelectedColor();
     }
   }
@@ -49,6 +51,6 @@ export class TextColorPickerDropdownComponent implements OnInit, OnChanges {
   }
 
   private setSelectedColor() {
-    this.selectedColor = this.text.colors.find(c => c.isSelected);
+    this.selectedColor = this.model.colors.find(c => c.isSelected);
   }
 }
