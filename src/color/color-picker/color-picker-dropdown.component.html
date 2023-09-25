@@ -11,24 +11,9 @@
     ngbDropdownToggle
   >
     <div class="color-picker__selected">
-      <ng-container [ngSwitch]="model.updateType">
-        <div 
-          *ngSwitchCase="ColorUpdateType.Font"
-          class="color-picker__selected-square"
+        <div class="color-picker__selected-square"
           [ngStyle]="{ 'background-color': selectedColor?.color }"
-        ></div>
-        <div
-          *ngSwitchCase="ColorUpdateType.Theme"
-          class="color-picker__selected-square"
-          [ngStyle]="{
-            color: selectedTheme?.color,
-            'background-color': selectedTheme?.backgroundColor
-          }"
-        >
-          <span>Aa</span>
-        </div>
-      </ng-container>
-      
+        ></div>      
     </div>
     <mat-icon class="color-picker__arrow" *ngIf="!arrowUp" fontIcon="expand_more"></mat-icon>
     <mat-icon class="color-picker__arrow" *ngIf="arrowUp" fontIcon="expand_less"></mat-icon>
@@ -36,19 +21,10 @@
   <div
     ngbDropdownMenu
     aria-labelledby="colorpalette"
-    class="color-picker__dropdown-menu"
-  >
-    <ng-container [ngSwitch]="model.updateType">
+    class="color-picker__dropdown-menu"  >
       <app-colors-grid
-        *ngSwitchCase="ColorUpdateType.Font"
-        [colors]="model.colors"
+        [colors]="colors"
         (selected)="onSelectedColor($event)"
       ></app-colors-grid>
-      <app-colors-theme-grid
-        *ngSwitchCase="ColorUpdateType.Theme"
-        [colors]="model.themeColors"
-        (selected)="onSelectedColor($event)"
-      ></app-colors-theme-grid>
-    </ng-container>
   </div>
 </div>
