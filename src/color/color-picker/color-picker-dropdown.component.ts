@@ -23,7 +23,7 @@ export class ColorPickerDropdownComponent implements OnInit, OnChanges {
   @Output() selected = new EventEmitter<IColorModel>();
 
   protected selectedColor: IColorModel | undefined;
-  protected arrowUp: boolean = false;
+  protected isOpened: boolean = false;
   protected style: string = '';
 
   ngOnInit(): void {
@@ -37,7 +37,7 @@ export class ColorPickerDropdownComponent implements OnInit, OnChanges {
   }
 
   protected onOpenChange(isOpened: boolean) {
-    this.arrowUp = isOpened;
+    this.isOpened = isOpened;
   }
 
   protected onSelectedColor(color: IColorModel ) {
