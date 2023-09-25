@@ -1,5 +1,5 @@
-import { ColorThemeModel } from "./color-theme.model";
-import { ColorModel } from "./color.model";
+import { IColorThemeModel } from "./color-theme.model";
+import { IColorModel } from "./color.model";
 
 export enum ColorUpdateType {
     Font = 'Font',
@@ -8,10 +8,18 @@ export enum ColorUpdateType {
 
 export class ColorUpdateModel {
     updateType: ColorUpdateType;
-    colors: (ColorModel | ColorThemeModel)[];
+    colors: IColorModel[] | undefined;
+    themeColors: IColorThemeModel[] | undefined;
 
-    constructor(updateType: ColorUpdateType, colors: (ColorModel | ColorThemeModel)[]) {
+    constructor(updateType: ColorUpdateType, colors: (IColorModel | IColorThemeModel)[]) {
         this.updateType = updateType;
-        this.colors = colors;
+        switch(updateType){
+            case ColorUpdateType.Font:
+                this.colors = colors;
+                break;
+            case ColorUpdateType.Theme:
+                this.themeColors = colors as IColorThemeModel[];
+                break;
+        }
     }
 }

@@ -1,10 +1,10 @@
-import { IColor } from './color.model';
+import { IColorModel } from './color.model';
 
-export interface IColorTheme extends IColor {
+export interface IColorThemeModel extends IColorModel {
     backgroundColor: string;
 }
 
-export class ColorThemeModel implements IColorTheme {
+export class ColorThemeModel implements IColorThemeModel {
     color: string;
     backgroundColor: string;
     isSelected: boolean;

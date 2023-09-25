@@ -1,8 +1,9 @@
-export interface IColor {
+export interface IColorModel {
     color: string;
+    isSelected: boolean;
 }
 
-export class ColorModel implements IColor {
+export class ColorModel implements IColorModel {
     color: string;
     isSelected: boolean;
 

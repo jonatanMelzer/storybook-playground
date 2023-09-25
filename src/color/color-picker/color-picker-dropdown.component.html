@@ -12,7 +12,7 @@
   >
     <div class="color-picker__selected">
       <ng-container [ngSwitch]="model.updateType">
-        <div
+        <div 
           *ngSwitchCase="ColorUpdateType.Font"
           class="color-picker__selected-square"
           [ngStyle]="{ 'background-color': selectedColor?.color }"
@@ -21,13 +21,14 @@
           *ngSwitchCase="ColorUpdateType.Theme"
           class="color-picker__selected-square"
           [ngStyle]="{
-            color: selectedColor?.color,
-            'background-color': selectedColor?.backgroundColor
+            color: selectedTheme?.color,
+            'background-color': selectedTheme?.backgroundColor
           }"
         >
           <span>Aa</span>
         </div>
       </ng-container>
+      
     </div>
     <mat-icon [ngStyle]="{'color': 'white'}" class="color-picker__arrow" *ngIf="arrowUp" fontIcon="home"></mat-icon>
     <mat-icon [ngStyle]="{'color': 'white'}" class="color-picker__arrow" *ngIf="!arrowUp" fontIcon="home"></mat-icon>
@@ -45,7 +46,7 @@
       ></app-colors-grid>
       <app-colors-theme-grid
         *ngSwitchCase="ColorUpdateType.Theme"
-        [colors]="model.colors"
+        [colors]="model.themeColors"
         (selected)="onSelectedColor($event)"
       ></app-colors-theme-grid>
     </ng-container>
