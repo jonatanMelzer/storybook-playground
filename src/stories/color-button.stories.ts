@@ -16,10 +16,10 @@ type Story = StoryObj<ColorButtonComponent>;
 const color = new ColorModel('#95C533', false);
 ;
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
-export const ColorButton: Story = {
+export const unselected: Story = {
   args: {
     color: color,
-    isSelected: true,
+    isSelected: false,
   },
   parameters: {
     backgrounds: {
@@ -30,3 +30,18 @@ export const ColorButton: Story = {
     },
   },
 };
+
+export const selected: Story = {
+    args: {
+      color: color,
+      isSelected: true,
+    },
+    parameters: {
+      backgrounds: {
+        default: 'dark',
+        values: [
+          { name: 'dark', value: '#363636' },
+        ],
+      },
+    },
+  };

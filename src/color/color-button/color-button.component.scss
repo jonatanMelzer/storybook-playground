@@ -37,14 +37,3 @@
     cursor: pointer;
   }
 }
-
-@include media-breakpoint-up(sm) {
-  @media screen and (orientation: landscape) {
-    .color {
-      &__square {
-        width: 1.68rem;
-        height: 1.68rem;
-      }
-    }
-  }
-}

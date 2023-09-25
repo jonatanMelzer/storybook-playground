@@ -8,13 +8,3 @@
     grid-template-columns: repeat(8, 1fr);
   }
 }
-
-@include media-breakpoint-up(sm) {
-  @media screen and (orientation: landscape) {
-    .colors-container {
-      &__galery {
-        margin: 0rem;
-      }
-    }
-  }
-}

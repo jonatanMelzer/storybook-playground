@@ -15,19 +15,19 @@ type Story = StoryObj<ColorsGridComponent>;
 
 const colors = 
     [
-      new ColorModel('#FFE4C4', false), 
+      new ColorModel('#FFE4C4', true), 
       new ColorModel('#FA9ACD', false),
       new ColorModel('#DB7093', false),
       new ColorModel('#FF00FF', false),
       new ColorModel('#C71585', false),
       new ColorModel('#800080', false),
       new ColorModel('#4B1182', false),
-      new ColorModel('#CBE399', true),
+      new ColorModel('#CBE399', false),
       new ColorModel('#9ACC9A', false),
       new ColorModel('#95C533', false),
     ];
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
-export const ColorGrid: Story = {
+export const multipleColors: Story = {
   args: {
     colors: colors,
   },

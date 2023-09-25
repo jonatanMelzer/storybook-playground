@@ -30,7 +30,7 @@ const colors =
       new ColorModel('#95C533', false),
     ];
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
-export const ColorPicker: Story = {
+export const multipleColorsPicker: Story = {
   args: {
     colors: colors,
     label: 'Color',
