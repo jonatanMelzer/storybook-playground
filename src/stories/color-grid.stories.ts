@@ -1,20 +1,17 @@
-import { componentWrapperDecorator, type Meta, type StoryObj } from '@storybook/angular';
-import { ColorPickerDropdownComponent } from 'src/color/color-picker/color-picker-dropdown.component';
+import { Meta, StoryObj } from '@storybook/angular';
+import { ColorsGridComponent } from 'src/color/colors-grid/colors-grid.component';
 import { ColorModel } from 'src/color/model/color.model';
 
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
-const meta: Meta<ColorPickerDropdownComponent> = {
-  title: 'Color/Picker',
-  component: ColorPickerDropdownComponent,
+const meta: Meta<ColorsGridComponent> = {
+  title: 'Color/Grid',
+  component: ColorsGridComponent,
   tags: ['autodocs'],
-  decorators: [
-    componentWrapperDecorator((story) => `<div>${story}</div>`)
-  ],
 };
 
 export default meta;
-type Story = StoryObj<ColorPickerDropdownComponent>;
+type Story = StoryObj<ColorsGridComponent>;
 
 const colors = 
     [
@@ -30,10 +27,9 @@ const colors =
       new ColorModel('#95C533', false),
     ];
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
-export const ColorPicker: Story = {
+export const ColorGrid: Story = {
   args: {
     colors: colors,
-    label: 'Color',
   },
   parameters: {
     backgrounds: {

@@ -1,11 +1,8 @@
 <div class="color" *ngIf="color">
-  <app-checkmark
-    *ngIf="isSelected"
-    class="color__checkmark"
-  ></app-checkmark>
   <div
     class="color__square"
     [ngStyle]="{ 'background-color': color.color }"
-    (click)="selected.emit(color)"
-  ></div>
+    (click)="selected.emit(color)">  
+    <app-checkmark *ngIf="isSelected" class="color__checkmark"></app-checkmark>
+  </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ColorModel } from '../model/color.model';
+import { IColorModel } from '../model/color.model';
 import { ColorButtonComponent } from '../color-button/color-button.component';
 import { CommonModule } from '@angular/common';
 
@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
   imports:[CommonModule, ColorButtonComponent]
 })
 export class ColorsGridComponent {
-  @Input() colors: Array<ColorModel> | undefined;
-  @Output() selected = new EventEmitter<ColorModel>();
+  @Input() colors: Array<IColorModel> | undefined;
+  @Output() selected = new EventEmitter<IColorModel>();
 
-  protected select(selected: ColorModel): void {
+  protected select(selected: IColorModel): void {
     this.colors?.forEach(c => {
       if (c.color === selected.color) {
         c.isSelected = true;

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { ColorModel, IColorModel } from '../model/color.model';
+import { IColorModel } from '../model/color.model';
 import { ColorsGridComponent } from '../colors-grid/colors-grid.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
@@ -18,13 +18,12 @@ import { MatIconModule } from '@angular/material/icon';
   ],
 })
 export class ColorPickerDropdownComponent implements OnInit, OnChanges {
-  @Input() colors!: ColorModel[];
+  @Input() colors!: IColorModel[];
   @Input() label: string = '';
   @Output() selected = new EventEmitter<IColorModel>();
 
   protected selectedColor: IColorModel | undefined;
   protected isOpened: boolean = false;
-  protected style: string = '';
 
   ngOnInit(): void {
     this.setSelectedColor();
@@ -40,8 +39,8 @@ export class ColorPickerDropdownComponent implements OnInit, OnChanges {
     this.isOpened = isOpened;
   }
 
-  protected onSelectedColor(color: IColorModel ) {
-    this.selectedColor = color;    
+  protected onSelected(color: IColorModel) {
+    this.selectedColor = color;
     this.selected.emit(color);
   }
 
