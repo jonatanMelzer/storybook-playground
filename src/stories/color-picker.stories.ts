@@ -11,7 +11,7 @@ const meta: Meta<ColorPickerDropdownComponent> = {
   tags: ['autodocs'],
   decorators: [
     componentWrapperDecorator((story) => `<div style="margin-left: 10em">${story}</div>`)
-  ]
+  ],
 };
 
 export default meta;
@@ -31,7 +31,7 @@ export const ColorPicker: Story = {
     backgrounds: {
       default: 'dark',
       values: [
-        { name: 'dark', value: '#000' },
+        { name: 'dark', value: '#363636' },
       ],
     },
   },
