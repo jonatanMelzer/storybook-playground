@@ -234,8 +234,9 @@
         },
         {
             "name": "ColorButtonComponent",
-            "id": "component-ColorButtonComponent-7094f70ef6c2aadc2a27e86c8dd859c14a461657fd21872b9a27f94214993503d9570bf6e6844a4fcefea441fde0086b8c88bbb7d3943ff49f4d1ca22d5700b1",
+            "id": "component-ColorButtonComponent-adabf7d04606f21240208cedc958274fe9d806292694342f120299c6d5a9dcd27f2da2fff64172b8daddb4425353cf6696cc39aab2e9486d51ed665f87abe934",
             "file": "src/color/color-button/color-button.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -256,7 +257,7 @@
                     "name": "color",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 15,
                     "type": "ColorModel | undefined",
                     "decorators": []
                 },
@@ -265,7 +266,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "line": 16,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -276,7 +277,7 @@
                     "defaultValue": "new EventEmitter<ColorModel>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 17,
                     "type": "EventEmitter"
                 }
             ],
@@ -300,11 +301,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorModel } from '../model/color.model';\r\nimport { CheckmarkComponent } from 'src/checkmark/checkmark.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-color-button',\r\n  templateUrl: './color-button.component.html',\r\n  styleUrls: ['./color-button.component.scss'],\r\n  standalone: true,\r\n  imports: [CommonModule, CheckmarkComponent]\r\n})\r\nexport class ColorButtonComponent {\r\n  @Input() color: ColorModel | undefined;\r\n  @Input() isSelected: boolean = false;\r\n  @Output() selected = new EventEmitter<ColorModel>();\r\n}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorModel } from '../model/color.model';\r\nimport { CheckmarkComponent } from 'src/checkmark/checkmark.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-color-button',\r\n  templateUrl: './color-button.component.html',\r\n  styleUrls: ['./color-button.component.scss'],\r\n  standalone: true,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  imports: [CommonModule, CheckmarkComponent]\r\n})\r\nexport class ColorButtonComponent {\r\n  @Input() color: ColorModel | undefined;\r\n  @Input() isSelected: boolean = false;\r\n  @Output() selected = new EventEmitter<ColorModel>();\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    top: -0.25rem;\r\n    right: -0.25rem;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}\r\n\r\n@include media-breakpoint-up(sm) {\r\n  @media screen and (orientation: landscape) {\r\n    .color {\r\n      &__square {\r\n        width: 1.68rem;\r\n        height: 1.68rem;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    top: -0.25rem;\r\n    right: -0.25rem;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}",
                     "styleUrl": "./color-button.component.scss"
                 }
             ],
@@ -313,7 +314,7 @@
         },
         {
             "name": "ColorPickerDropdownComponent",
-            "id": "component-ColorPickerDropdownComponent-d29021e34efddc26668a925a4e06a8f530738581841f63ca848484c747fe9a47198a4dcc0dd36b571b36e384e201ee9db7856cb871eda963f5b98935436fbe22",
+            "id": "component-ColorPickerDropdownComponent-999f02a70e52210dfd4bed2ce7eb283847f03cb07f050e8fc147c6f19483d680b1c9427213f2fcb7133e5f32e97e02c3edbc51b29b5e843c58181fd6c79a5d0d",
             "file": "src/color/color-picker/color-picker-dropdown.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -457,7 +458,7 @@
                     ]
                 },
                 {
-                    "name": "onSelectedColor",
+                    "name": "select",
                     "args": [
                         {
                             "name": "color",
@@ -493,7 +494,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 48,
+                    "line": 47,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -527,11 +528,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';\r\nimport { IColorModel } from '../model/color.model';\r\nimport { ColorsGridComponent } from '../colors-grid/colors-grid.component';\r\nimport { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'app-color-picker-dropdown',\r\n  templateUrl: './color-picker-dropdown.component.html',\r\n  styleUrls: ['./color-picker-dropdown.component.scss'],\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    ColorsGridComponent, \r\n    NgbDropdownModule,\r\n    MatIconModule\r\n  ],\r\n})\r\nexport class ColorPickerDropdownComponent implements OnInit, OnChanges {\r\n  @Input() colors!: IColorModel[];\r\n  @Input() label: string = '';\r\n  @Output() selected = new EventEmitter<IColorModel>();\r\n\r\n  protected selectedColor: IColorModel | undefined;\r\n  protected isOpened: boolean = false;\r\n\r\n  ngOnInit(): void {\r\n    this.setSelectedColor();\r\n  }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    if (changes['colors']) {\r\n      this.setSelectedColor();\r\n    }\r\n  }\r\n\r\n  protected onOpenChange(isOpened: boolean) {\r\n    this.isOpened = isOpened;\r\n  }\r\n\r\n  protected onSelectedColor(color: IColorModel) {\r\n    this.selectedColor = this.colors[1];\r\n    this.setSelectedColor();\r\n    this.selected.emit(color);\r\n  }\r\n\r\n  private setSelectedColor() {\r\n    this.selectedColor = this.colors.find(c => c.isSelected);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';\r\nimport { IColorModel } from '../model/color.model';\r\nimport { ColorsGridComponent } from '../colors-grid/colors-grid.component';\r\nimport { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\n@Component({\r\n  selector: 'app-color-picker-dropdown',\r\n  templateUrl: './color-picker-dropdown.component.html',\r\n  styleUrls: ['./color-picker-dropdown.component.scss'],\r\n  standalone: true,\r\n  imports: [\r\n    CommonModule,\r\n    ColorsGridComponent, \r\n    NgbDropdownModule,\r\n    MatIconModule\r\n  ],\r\n})\r\nexport class ColorPickerDropdownComponent implements OnInit, OnChanges {\r\n  @Input() colors!: IColorModel[];\r\n  @Input() label: string = '';\r\n  @Output() selected = new EventEmitter<IColorModel>();\r\n\r\n  protected selectedColor: IColorModel | undefined;\r\n  protected isOpened: boolean = false;\r\n\r\n  ngOnInit(): void {\r\n    this.setSelectedColor();\r\n  }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    if (changes['colors']) {\r\n      this.setSelectedColor();\r\n    }\r\n  }\r\n\r\n  protected onOpenChange(isOpened: boolean) {\r\n    this.isOpened = isOpened;\r\n  }\r\n\r\n  protected select(color: IColorModel) {\r\n    this.selectedColor = color;\r\n    this.selected.emit(color);\r\n  }\r\n\r\n  private setSelectedColor() {\r\n    this.selectedColor = this.colors.find(c => c.isSelected);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".color-picker {\r\n  &__title {\r\n    display: block;\r\n    color: white;\r\n    margin-bottom: 0.6rem;\r\n  }\r\n\r\n  &__btn-outline-primary {\r\n    box-shadow: none;\r\n    outline: none;\r\n  }\r\n\r\n  &__selected-square {\r\n    width: 1.68rem;\r\n    height: 1.68rem;\r\n    min-height: 1.55rem;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n    font-size: 0.875rem;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n\r\n  &__arrow {\r\n    color: white;\r\n    font-size: 1.5rem;\r\n    font-weight:lighter;\r\n  }\r\n\r\n  &__dropdown-menu {\r\n    width: 18.2rem;\r\n    background-color: #303030;\r\n    padding: 0.25rem 0.5rem 0.5rem 0.5rem;\r\n    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.25);\r\n    margin-top: 4px !important;\r\n    inset: 0px 0px auto auto !important;\r\n  }\r\n\r\n  &__dropdown-toggle {\r\n    height: 2.5rem;\r\n    width: 8.5rem;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #2d2d2d;\r\n    border: 0;\r\n\r\n    &::after {\r\n      display: none;\r\n    }\r\n  }\r\n}\r\n",
+                    "data": ".color-picker {\r\n  margin-left: 10rem;\r\n\r\n  &__title {\r\n    display: block;\r\n    color: white;\r\n    margin-bottom: 0.6rem;\r\n  }\r\n\r\n  &__btn-outline-primary {\r\n    box-shadow: none;\r\n    outline: none;\r\n  }\r\n\r\n  &__selected-square {\r\n    width: 1.68rem;\r\n    height: 1.68rem;\r\n    min-height: 1.55rem;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n    font-size: 0.875rem;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n\r\n  &__arrow {\r\n    color: white;\r\n    font-size: 1.5rem;\r\n    font-weight:lighter;\r\n  }\r\n\r\n  &__dropdown-menu {\r\n    width: 18.2rem;\r\n    background-color: #303030;\r\n    padding: 0.25rem 0.5rem 0.5rem 0.5rem;\r\n    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.25);\r\n    margin-top: 4px !important;\r\n    inset: 0px 0px auto auto !important;\r\n  }\r\n\r\n  &__dropdown-toggle {\r\n    height: 2.5rem;\r\n    width: 8.5rem;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    background-color: #2d2d2d;\r\n    border: 0;\r\n\r\n    &::after {\r\n      display: none;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./color-picker-dropdown.component.scss"
                 }
             ],
@@ -540,7 +541,7 @@
                 "OnInit",
                 "OnChanges"
             ],
-            "templateData": "<div\r\n  ngbDropdown\r\n  class=\"color-picker d-inline-block\"\r\n  (openChange)=\"onOpenChange($event)\"\r\n>\r\n  <label class=\"color-picker__title\">{{ label }}</label>\r\n  <button\r\n    type=\"button\"\r\n    class=\"btn color-picker__btn-outline-primary color-picker__dropdown-toggle\"\r\n    id=\"colorpalette\"\r\n    ngbDropdownToggle\r\n  >\r\n    <div class=\"color-picker__selected\">\r\n        <div class=\"color-picker__selected-square\"\r\n          [ngStyle]=\"{ 'background-color': selectedColor?.color }\"\r\n        ></div>      \r\n    </div>\r\n    <mat-icon class=\"color-picker__arrow\" *ngIf=\"isOpened\" fontIcon=\"expand_less\"></mat-icon>\r\n    <mat-icon class=\"color-picker__arrow\" *ngIf=\"!isOpened\" fontIcon=\"expand_more\"></mat-icon>\r\n  </button>\r\n  <div\r\n    ngbDropdownMenu\r\n    aria-labelledby=\"colorpalette\"\r\n    class=\"color-picker__dropdown-menu\"  >\r\n      <app-colors-grid\r\n        [colors]=\"colors\"\r\n        (selected)=\"onSelectedColor($event)\"\r\n      ></app-colors-grid>\r\n  </div>\r\n</div>\r\n<div [ngStyle]=\"{ 'background-color': 'white' }\">{{selectedColor?.color}}</div>\r\n"
+            "templateData": "<div\r\n  ngbDropdown\r\n  class=\"color-picker d-inline-block\"\r\n  (openChange)=\"onOpenChange($event)\"\r\n>\r\n  <label class=\"color-picker__title\">{{ label }}</label>\r\n  <button\r\n    type=\"button\"\r\n    class=\"btn color-picker__btn-outline-primary color-picker__dropdown-toggle\"\r\n    id=\"colorpalette\"\r\n    ngbDropdownToggle\r\n  >\r\n    <div class=\"color-picker__selected\">\r\n        <div class=\"color-picker__selected-square\"\r\n          [ngStyle]=\"{ 'background-color': selectedColor?.color }\"\r\n        ></div>      \r\n    </div>\r\n    <mat-icon class=\"color-picker__arrow\" *ngIf=\"isOpened\" fontIcon=\"expand_less\"></mat-icon>\r\n    <mat-icon class=\"color-picker__arrow\" *ngIf=\"!isOpened\" fontIcon=\"expand_more\"></mat-icon>\r\n  </button>\r\n  <div\r\n    ngbDropdownMenu\r\n    aria-labelledby=\"colorpalette\"\r\n    class=\"color-picker__dropdown-menu\"  >\r\n      <app-colors-grid\r\n        [colors]=\"colors\"\r\n        (selected)=\"select($event)\"\r\n      ></app-colors-grid>\r\n  </div>\r\n</div>"
         },
         {
             "name": "ColorsGridComponent",
@@ -637,7 +638,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.colors-container {\r\n  &__galery {\r\n    gap: 0.5rem;\r\n    grid-template-columns: repeat(8, 1fr);\r\n  }\r\n}\r\n\r\n@include media-breakpoint-up(sm) {\r\n  @media screen and (orientation: landscape) {\r\n    .colors-container {\r\n      &__galery {\r\n        margin: 0rem;\r\n      }\r\n    }\r\n  }\r\n}",
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.colors-container {\r\n  &__galery {\r\n    gap: 0.5rem;\r\n    grid-template-columns: repeat(8, 1fr);\r\n  }\r\n}",
                     "styleUrl": "./colors-grid.component.scss"
                 }
             ],
@@ -747,54 +748,34 @@
                 "defaultValue": "new ColorModel('#95C533', false)"
             },
             {
-                "name": "ColorButton",
+                "name": "colors",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/color-grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n      new ColorModel('#FFE4C4', true), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', false),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+            },
+            {
+                "name": "colors",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/color-picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+            },
+            {
+                "name": "ColourButton",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/color-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: true,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
-            },
-            {
-                "name": "ColorGrid",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/color-grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    colors: colors,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
-            },
-            {
-                "name": "ColorPicker",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/color-picker.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
-            },
-            {
-                "name": "colors",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/color-grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "[]",
-                "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
-            },
-            {
-                "name": "colors",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/color-picker.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "[]",
-                "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+                "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: false,\n  }\n}"
             },
             {
                 "name": "meta",
@@ -824,7 +805,27 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorPickerDropdownComponent>",
-                "defaultValue": "{\n  title: 'Color/Picker',\n  component: ColorPickerDropdownComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"margin-left: 10em\">${story}</div>`)\n  ],\n}"
+                "defaultValue": "{\n  title: 'Color/Picker',\n  component: ColorPickerDropdownComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div>${story}</div>`)\n  ],\n}"
+            },
+            {
+                "name": "multipleColorsGrid",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/color-grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    colors: colors,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+            },
+            {
+                "name": "multipleColorsPicker",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/color-picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -887,14 +888,14 @@
                     "defaultValue": "new ColorModel('#95C533', false)"
                 },
                 {
-                    "name": "ColorButton",
+                    "name": "ColourButton",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/color-button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: true,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: false,\n  }\n}"
                 },
                 {
                     "name": "meta",
@@ -909,16 +910,6 @@
             ],
             "src/stories/color-grid.stories.ts": [
                 {
-                    "name": "ColorGrid",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/color-grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    colors: colors,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
-                },
-                {
                     "name": "colors",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -926,7 +917,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+                    "defaultValue": "[\n      new ColorModel('#FFE4C4', true), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', false),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
                 },
                 {
                     "name": "meta",
@@ -937,19 +928,19 @@
                     "deprecationMessage": "",
                     "type": "Meta<ColorsGridComponent>",
                     "defaultValue": "{\n  title: 'Color/Grid',\n  component: ColorsGridComponent,\n  tags: ['autodocs'],\n}"
-                }
-            ],
-            "src/stories/color-picker.stories.ts": [
+                },
                 {
-                    "name": "ColorPicker",
+                    "name": "multipleColorsGrid",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/color-picker.stories.ts",
+                    "file": "src/stories/color-grid.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
-                },
+                    "defaultValue": "{\n  args: {\n    colors: colors,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                }
+            ],
+            "src/stories/color-picker.stories.ts": [
                 {
                     "name": "colors",
                     "ctype": "miscellaneous",
@@ -968,7 +959,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ColorPickerDropdownComponent>",
-                    "defaultValue": "{\n  title: 'Color/Picker',\n  component: ColorPickerDropdownComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"margin-left: 10em\">${story}</div>`)\n  ],\n}"
+                    "defaultValue": "{\n  title: 'Color/Picker',\n  component: ColorPickerDropdownComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div>${story}</div>`)\n  ],\n}"
+                },
+                {
+                    "name": "multipleColorsPicker",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/color-picker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -1134,7 +1135,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "ColorButton",
+                "name": "ColourButton",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1154,16 +1155,6 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "ColorGrid",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/color-grid.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "colors",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -1180,11 +1171,11 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/color-picker.stories.ts",
+                "filePath": "src/stories/color-grid.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "ColorPicker",
+                "name": "multipleColorsGrid",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1205,6 +1196,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/color-picker.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "multipleColorsPicker",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

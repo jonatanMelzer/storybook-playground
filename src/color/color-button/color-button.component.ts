@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { ColorModel } from '../model/color.model';
 import { CheckmarkComponent } from 'src/checkmark/checkmark.component';
 import { CommonModule } from '@angular/common';
@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './color-button.component.html',
   styleUrls: ['./color-button.component.scss'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, CheckmarkComponent]
 })
 export class ColorButtonComponent {

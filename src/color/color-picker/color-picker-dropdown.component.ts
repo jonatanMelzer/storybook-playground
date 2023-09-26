@@ -39,7 +39,7 @@ export class ColorPickerDropdownComponent implements OnInit, OnChanges {
     this.isOpened = isOpened;
   }
 
-  protected onSelected(color: IColorModel) {
+  protected select(color: IColorModel) {
     this.selectedColor = color;
     this.selected.emit(color);
   }
