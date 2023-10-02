@@ -14,13 +14,16 @@ export class ColorsGridComponent {
   @Input() colors: Array<IColorModel> | undefined;
   @Output() selected = new EventEmitter<IColorModel>();
 
-  protected select(selectedColor: IColorModel): void {
+  protected select(selectedColor: string): void {
     const formerSelected = (this.colors?.find(c => c.isSelected));
     if(formerSelected){
       formerSelected.isSelected = false;
     }
-    selectedColor.isSelected = true;
+    const newSelected = (this.colors?.find(c => c.color === selectedColor));
+    if(newSelected){
+      newSelected.isSelected = true;
+    }
 
-    this.selected.emit(selectedColor);
+    this.selected.emit(newSelected);
   }
 }

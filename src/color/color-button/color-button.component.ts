@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { ColorModel } from '../model/color.model';
 import { CheckmarkComponent } from 'src/checkmark/checkmark.component';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +11,13 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, CheckmarkComponent]
 })
 export class ColorButtonComponent {
-  @Input() color: ColorModel | undefined;
+   /**
+   * Background color of button
+   */
+  @Input() color: string = '#000';
+     /**
+   * Selected State
+   */
   @Input() isSelected: boolean = false;
-  @Output() selected = new EventEmitter<ColorModel>();
+  @Output() selected = new EventEmitter<string>();
 }

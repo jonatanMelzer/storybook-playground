@@ -234,7 +234,7 @@
         },
         {
             "name": "ColorButtonComponent",
-            "id": "component-ColorButtonComponent-adabf7d04606f21240208cedc958274fe9d806292694342f120299c6d5a9dcd27f2da2fff64172b8daddb4425353cf6696cc39aab2e9486d51ed665f87abe934",
+            "id": "component-ColorButtonComponent-5dc7133dfdf39675a4625c546d50c9561ef85935fc5f01a9fe40db998084aaf42b784ad6038d03cccefc23e6051a5f34fcb525592c30c71b8bb30cdebc771658",
             "file": "src/color/color-button/color-button.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -255,10 +255,13 @@
             "inputsClass": [
                 {
                     "name": "color",
+                    "defaultValue": "'#000'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
-                    "type": "ColorModel | undefined",
+                    "rawdescription": "\n\nBackground color of button\n",
+                    "description": "<p>Background color of button</p>\n",
+                    "line": 17,
+                    "type": "string",
                     "decorators": []
                 },
                 {
@@ -266,7 +269,9 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "rawdescription": "\n\nSelected State\n",
+                    "description": "<p>Selected State</p>\n",
+                    "line": 21,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -274,10 +279,10 @@
             "outputsClass": [
                 {
                     "name": "selected",
-                    "defaultValue": "new EventEmitter<ColorModel>()",
+                    "defaultValue": "new EventEmitter<string>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 22,
                     "type": "EventEmitter"
                 }
             ],
@@ -301,7 +306,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { ColorModel } from '../model/color.model';\r\nimport { CheckmarkComponent } from 'src/checkmark/checkmark.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-color-button',\r\n  templateUrl: './color-button.component.html',\r\n  styleUrls: ['./color-button.component.scss'],\r\n  standalone: true,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  imports: [CommonModule, CheckmarkComponent]\r\n})\r\nexport class ColorButtonComponent {\r\n  @Input() color: ColorModel | undefined;\r\n  @Input() isSelected: boolean = false;\r\n  @Output() selected = new EventEmitter<ColorModel>();\r\n}\r\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { CheckmarkComponent } from 'src/checkmark/checkmark.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-color-button',\r\n  templateUrl: './color-button.component.html',\r\n  styleUrls: ['./color-button.component.scss'],\r\n  standalone: true,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  imports: [CommonModule, CheckmarkComponent]\r\n})\r\nexport class ColorButtonComponent {\r\n   /**\r\n   * Background color of button\r\n   */\r\n  @Input() color: string = '#000';\r\n     /**\r\n   * Selected State\r\n   */\r\n  @Input() isSelected: boolean = false;\r\n  @Output() selected = new EventEmitter<string>();\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -310,7 +315,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"color\" *ngIf=\"color\">\r\n  <div\r\n    class=\"color__square\"\r\n    [ngStyle]=\"{ 'background-color': color.color }\"\r\n    (click)=\"selected.emit(color)\">  \r\n    <app-checkmark *ngIf=\"isSelected\" class=\"color__checkmark\"></app-checkmark>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"color\">\r\n  <div\r\n    class=\"color__square\"\r\n    [ngStyle]=\"{ 'background-color': color }\"\r\n    (click)=\"selected.emit(color)\">  \r\n    <app-checkmark *ngIf=\"isSelected\" class=\"color__checkmark\"></app-checkmark>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "ColorPickerDropdownComponent",
@@ -545,7 +550,7 @@
         },
         {
             "name": "ColorsGridComponent",
-            "id": "component-ColorsGridComponent-b67acc6309ed9d382c60ff2b91b4820db5ce6cdd2032a2ad4ee39ec4101ebb38e4bc7e3d284860e3369697eded07768b2ffbde492af84c0a41b90a4b41fe63eb",
+            "id": "component-ColorsGridComponent-fa8bc9851e3aaae748540e1321525e3c8f0ef08110d8e2f494cf14e33176d3345b67f53d2d200299963394806580b3ca1e01e2d0bea4b28f43125c80481f1aa8",
             "file": "src/color/colors-grid/colors-grid.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -589,7 +594,7 @@
                     "args": [
                         {
                             "name": "selectedColor",
-                            "type": "IColorModel",
+                            "type": "string",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -606,7 +611,7 @@
                     "jsdoctags": [
                         {
                             "name": "selectedColor",
-                            "type": "IColorModel",
+                            "type": "string",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -634,7 +639,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { IColorModel } from '../model/color.model';\r\nimport { ColorButtonComponent } from '../color-button/color-button.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-colors-grid',\r\n  templateUrl: './colors-grid.component.html',\r\n  styleUrls: ['./colors-grid.component.scss'],\r\n  standalone: true,\r\n  imports:[CommonModule, ColorButtonComponent]\r\n})\r\nexport class ColorsGridComponent {\r\n  @Input() colors: Array<IColorModel> | undefined;\r\n  @Output() selected = new EventEmitter<IColorModel>();\r\n\r\n  protected select(selectedColor: IColorModel): void {\r\n    const formerSelected = (this.colors?.find(c => c.isSelected));\r\n    if(formerSelected){\r\n      formerSelected.isSelected = false;\r\n    }\r\n    selectedColor.isSelected = true;\r\n\r\n    this.selected.emit(selectedColor);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { IColorModel } from '../model/color.model';\r\nimport { ColorButtonComponent } from '../color-button/color-button.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-colors-grid',\r\n  templateUrl: './colors-grid.component.html',\r\n  styleUrls: ['./colors-grid.component.scss'],\r\n  standalone: true,\r\n  imports:[CommonModule, ColorButtonComponent]\r\n})\r\nexport class ColorsGridComponent {\r\n  @Input() colors: Array<IColorModel> | undefined;\r\n  @Output() selected = new EventEmitter<IColorModel>();\r\n\r\n  protected select(selectedColor: string): void {\r\n    const formerSelected = (this.colors?.find(c => c.isSelected));\r\n    if(formerSelected){\r\n      formerSelected.isSelected = false;\r\n    }\r\n    const newSelected = (this.colors?.find(c => c.color === selectedColor));\r\n    if(newSelected){\r\n      newSelected.isSelected = true;\r\n    }\r\n\r\n    this.selected.emit(newSelected);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -643,7 +648,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"colors-container\">\r\n  <div class=\"d-grid colors-container__galery\">\r\n    <div\r\n      *ngFor=\"let color of colors\"\r\n      class=\"col-auto px-0 colors-container__button\"\r\n    >\r\n      <app-color-button\r\n        [color]=\"color\"\r\n        [isSelected]=\"color.isSelected\"\r\n        (selected)=\"select($event)\"\r\n      ></app-color-button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"colors-container\">\r\n  <div class=\"d-grid colors-container__galery\">\r\n    <div\r\n      *ngFor=\"let color of colors\"\r\n      class=\"col-auto px-0 colors-container__button\"\r\n    >\r\n      <app-color-button\r\n        [color]=\"color.color\"\r\n        [isSelected]=\"color.isSelected\"\r\n        (selected)=\"select($event)\"\r\n      ></app-color-button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [
@@ -1110,7 +1115,7 @@
         ]
     },
     "coverage": {
-        "count": 0,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -1146,9 +1151,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ColorButtonComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
+                "coveragePercent": 50,
+                "coverageCount": "2/4",
+                "status": "medium"
             },
             {
                 "filePath": "src/color/color-picker/color-picker-dropdown.component.ts",
