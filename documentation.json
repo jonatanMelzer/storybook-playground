@@ -230,7 +230,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"white\" class=\"checkmark\" viewBox=\"0 0 16 16\">\r\n    <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z\"/>\r\n</svg>"
+            "templateData": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"100%\" fill=\"white\" class=\"checkmark\" viewBox=\"0 0 16 16\">\r\n    <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z\"/>\r\n</svg>"
         },
         {
             "name": "ColorButtonComponent",
@@ -305,7 +305,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    top: -0.25rem;\r\n    right: -0.25rem;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}",
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    width: 20%;\r\n    height: 20%;\r\n    top: -4%;\r\n    right: -4%;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}",
                     "styleUrl": "./color-button.component.scss"
                 }
             ],
@@ -545,7 +545,7 @@
         },
         {
             "name": "ColorsGridComponent",
-            "id": "component-ColorsGridComponent-cdadfbaeddd20a4301363bb276fc0d810d7ad6110267e14b3c09ba6191e390d907c67f42b46a08532d38baeb8bce34552cf56a4e9b0520088916052193032fdd",
+            "id": "component-ColorsGridComponent-b67acc6309ed9d382c60ff2b91b4820db5ce6cdd2032a2ad4ee39ec4101ebb38e4bc7e3d284860e3369697eded07768b2ffbde492af84c0a41b90a4b41fe63eb",
             "file": "src/color/colors-grid/colors-grid.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -588,7 +588,7 @@
                     "name": "select",
                     "args": [
                         {
-                            "name": "selected",
+                            "name": "selectedColor",
                             "type": "IColorModel",
                             "deprecated": false,
                             "deprecationMessage": ""
@@ -605,7 +605,7 @@
                     ],
                     "jsdoctags": [
                         {
-                            "name": "selected",
+                            "name": "selectedColor",
                             "type": "IColorModel",
                             "deprecated": false,
                             "deprecationMessage": "",
@@ -634,7 +634,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { IColorModel } from '../model/color.model';\r\nimport { ColorButtonComponent } from '../color-button/color-button.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-colors-grid',\r\n  templateUrl: './colors-grid.component.html',\r\n  styleUrls: ['./colors-grid.component.scss'],\r\n  standalone: true,\r\n  imports:[CommonModule, ColorButtonComponent]\r\n})\r\nexport class ColorsGridComponent {\r\n  @Input() colors: Array<IColorModel> | undefined;\r\n  @Output() selected = new EventEmitter<IColorModel>();\r\n\r\n  protected select(selected: IColorModel): void {\r\n    this.colors?.forEach(c => {\r\n      if (c.color === selected.color) {\r\n        c.isSelected = true;\r\n      }\r\n      else {\r\n        c.isSelected = false;\r\n      }\r\n    });\r\n\r\n    this.selected.emit(selected);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\r\nimport { IColorModel } from '../model/color.model';\r\nimport { ColorButtonComponent } from '../color-button/color-button.component';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-colors-grid',\r\n  templateUrl: './colors-grid.component.html',\r\n  styleUrls: ['./colors-grid.component.scss'],\r\n  standalone: true,\r\n  imports:[CommonModule, ColorButtonComponent]\r\n})\r\nexport class ColorsGridComponent {\r\n  @Input() colors: Array<IColorModel> | undefined;\r\n  @Output() selected = new EventEmitter<IColorModel>();\r\n\r\n  protected select(selectedColor: IColorModel): void {\r\n    const formerSelected = (this.colors?.find(c => c.isSelected));\r\n    if(formerSelected){\r\n      formerSelected.isSelected = false;\r\n    }\r\n    selectedColor.isSelected = true;\r\n\r\n    this.selected.emit(selectedColor);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -738,6 +738,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Checkmark",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/checkmark.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n\n}"
+            },
+            {
                 "name": "color",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -776,6 +786,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: false,\n  }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/checkmark.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckmarkComponent>",
+                "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n}"
             },
             {
                 "name": "meta",
@@ -844,6 +864,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<CheckmarkComponent>",
+                "file": "src/stories/checkmark.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<ColorButtonComponent>",
                 "file": "src/stories/color-button.stories.ts",
                 "deprecated": false,
@@ -876,6 +907,28 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/checkmark.stories.ts": [
+                {
+                    "name": "Checkmark",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/checkmark.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/checkmark.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CheckmarkComponent>",
+                    "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n}"
+                }
+            ],
             "src/stories/color-button.stories.ts": [
                 {
                     "name": "color",
@@ -988,6 +1041,19 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "src/stories/checkmark.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckmarkComponent>",
+                    "file": "src/stories/checkmark.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
             "src/stories/color-button.stories.ts": [
                 {
                     "name": "Story",
@@ -1118,6 +1184,26 @@
                 "name": "IColorModel",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/checkmark.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Checkmark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/checkmark.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
