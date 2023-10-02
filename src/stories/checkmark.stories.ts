@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
 import { CheckmarkComponent } from 'src/checkmark/checkmark.component';
 
 
@@ -7,6 +7,9 @@ const meta: Meta<CheckmarkComponent> = {
   title: 'Basic/Checkmark',
   component: CheckmarkComponent,
   tags: ['autodocs'],
+  decorators: [
+    componentWrapperDecorator((story) => `<div style="width: 25%; height: 25%">${story}</div>`)
+  ],
 };
 
 export default meta;

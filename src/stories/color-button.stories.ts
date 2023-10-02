@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
 import { ColorButtonComponent } from 'src/color/color-button/color-button.component';
 
 
@@ -7,6 +7,9 @@ const meta: Meta<ColorButtonComponent> = {
   title: 'Color/Button',
   component: ColorButtonComponent,
   tags: ['autodocs'],
+  decorators: [
+    componentWrapperDecorator((story) => `<div style="width: 25%; height: 25%">${story}</div>`)
+  ],
 };
 
 export default meta;
