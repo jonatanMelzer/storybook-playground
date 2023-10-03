@@ -18,5 +18,4 @@ type Story = StoryObj<CheckmarkComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Checkmark: Story = {
-
 };
