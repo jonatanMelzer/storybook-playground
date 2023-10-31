@@ -186,7 +186,7 @@
         },
         {
             "name": "CheckmarkComponent",
-            "id": "component-CheckmarkComponent-6d4e290d603761106648a028f6dc6e5009d2c58e43aec16f5e1b9989ad5fa4a9581509bda80e3b44c5b4ce66b93b2f10376043c8ed9c082dd4dd3b4611dddba5",
+            "id": "component-CheckmarkComponent-5b24811f201d1ae120a125b5059d4dffb30dcf16e0b3c64e7522e1baafd1ea3e0423e968cebb8f0be176a29d22a5dbd9da56432ff40133bf99c6377e6aba2a2c",
             "file": "src/checkmark/checkmark.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -198,9 +198,8 @@
                 "./checkmark.component.scss"
             ],
             "styles": [],
-            "templateUrl": [
-                "./checkmark.component.html"
-            ],
+            "template": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"100%\" fill=\"white\" class=\"checkmark\" viewBox=\"0 0 16 16\">\n  <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z\"/>\n</svg>\n",
+            "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
@@ -221,7 +220,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-checkmark',\r\n  templateUrl: './checkmark.component.html',\r\n  styleUrls: ['./checkmark.component.scss'],\r\n  standalone: true,\r\n  imports:[CommonModule]\r\n})\r\nexport class CheckmarkComponent { }\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-checkmark',\r\n  styleUrls: ['./checkmark.component.scss'],\r\n  standalone: true,\r\n  imports:[CommonModule],\r\n  template: `\r\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"100%\" fill=\"white\" class=\"checkmark\" viewBox=\"0 0 16 16\">\r\n      <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z\"/>\r\n    </svg>\r\n    `\r\n})\r\nexport class CheckmarkComponent { }\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -229,8 +228,7 @@
                     "styleUrl": "./checkmark.component.scss"
                 }
             ],
-            "stylesData": "",
-            "templateData": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"100%\" fill=\"white\" class=\"checkmark\" viewBox=\"0 0 16 16\">\r\n    <path d=\"M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z\"/>\r\n</svg>"
+            "stylesData": ""
         },
         {
             "name": "ColorButtonComponent",
@@ -310,12 +308,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    width: 20%;\r\n    height: 20%;\r\n    top: -4%;\r\n    right: -4%;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}",
+                    "data": "@import \"bootstrap/scss/functions\";\r\n@import \"bootstrap/scss/variables\";\r\n@import \"bootstrap/scss/mixins/breakpoints\";\r\n\r\n.color {\r\n  position: relative;\r\n\r\n  &__square {\r\n    position: relative;\r\n    width: 100%;\r\n    border-radius: 0.18rem;\r\n    border: solid white 1px;\r\n  }\r\n\r\n  &__square:after {\r\n    content: \"\";\r\n    display: block;\r\n    padding-bottom: 100%;\r\n  }\r\n\r\n  .content {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  &__checkmark {\r\n    position: absolute;\r\n    width: 45%;\r\n    height: 45%;\r\n    top: -7%;\r\n    right: -7%;\r\n    z-index: 1;\r\n    visibility: visible;\r\n    display: flex;\r\n  }\r\n\r\n  :hover {\r\n    cursor: pointer;\r\n  }\r\n}",
                     "styleUrl": "./color-button.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"color\">\r\n  <div\r\n    class=\"color__square\"\r\n    [ngStyle]=\"{ 'background-color': color }\"\r\n    (click)=\"selected.emit(color)\">  \r\n    <app-checkmark *ngIf=\"isSelected\" class=\"color__checkmark\"></app-checkmark>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"color\">\r\n  <div\r\n    class=\"color__square\"\r\n    [ngStyle]=\"{ 'background-color': color }\"\r\n    (click)=\"selected.emit(color)\">  \r\n    <app-checkmark role=\"checkmark\" *ngIf=\"isSelected\" class=\"color__checkmark\"></app-checkmark>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "ColorPickerDropdownComponent",
@@ -750,17 +748,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n\n}"
-            },
-            {
-                "name": "color",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/color-button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "new ColorModel('#95C533', false)"
+                "defaultValue": "{\n}"
             },
             {
                 "name": "colors",
@@ -783,14 +771,14 @@
                 "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
             },
             {
-                "name": "ColourButton",
+                "name": "FilledColourButton",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/color-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: false,\n  }\n}"
+                "defaultValue": "{\n  args: {\n    color: '#95C533',\n    isSelected: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const element = canvas.getByRole('checkmark');\n\n    await expect(element).toBeInTheDocument();\n  }\n}"
             },
             {
                 "name": "meta",
@@ -800,7 +788,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CheckmarkComponent>",
-                "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n}"
+                "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
             },
             {
                 "name": "meta",
@@ -810,7 +798,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorButtonComponent>",
-                "defaultValue": "{\n  title: 'Color/Button',\n  component: ColorButtonComponent,\n  tags: ['autodocs'],\n}"
+                "defaultValue": "{\n  title: 'Color/Button',\n  component: ColorButtonComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
             },
             {
                 "name": "meta",
@@ -921,7 +909,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n\n}"
+                    "defaultValue": "{\n}"
                 },
                 {
                     "name": "meta",
@@ -931,39 +919,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CheckmarkComponent>",
-                    "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n}"
-                }
-            ],
-            "src/stories/color-button.stories.ts": [
-                {
-                    "name": "color",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/color-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "new ColorModel('#95C533', false)"
-                },
-                {
-                    "name": "ColourButton",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/color-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    color: color,\n    isSelected: false,\n  }\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/color-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ColorButtonComponent>",
-                    "defaultValue": "{\n  title: 'Color/Button',\n  component: ColorButtonComponent,\n  tags: ['autodocs'],\n}"
+                    "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
                 }
             ],
             "src/stories/color-grid.stories.ts": [
@@ -1028,6 +984,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                }
+            ],
+            "src/stories/color-button.stories.ts": [
+                {
+                    "name": "FilledColourButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/color-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    color: '#95C533',\n    isSelected: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const element = canvas.getByRole('checkmark');\n\n    await expect(element).toBeInTheDocument();\n  }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/color-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ColorButtonComponent>",
+                    "defaultValue": "{\n  title: 'Color/Button',\n  component: ColorButtonComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -1216,17 +1194,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "color",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/color-button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "ColourButton",
+                "name": "FilledColourButton",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
