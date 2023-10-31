@@ -122,7 +122,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-aa6fce284c64e36acfed7f490bc4ff7dbff193f2a287a684619029929e7f75078d5a3ef25841e2eabbbb1f03509722f36d20567126e2b2e5bfa1d599abc9987d",
+            "id": "component-AppComponent-b22cc618f62d949c350f65391e5806c0811be634616ee9817afb663bbddd3b5821e3885b7afcc54b17544e897b2616b00a6b219dbb2921d9957a217920bb82ee",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -173,16 +173,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { ColorModel } from 'src/color/model/color.model';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'storybook';\n\n  colors = [new ColorModel('#A4A5A7', true), new ColorModel('#00000', false)];\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { ColorModel } from 'src/color/model/color.model';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'storybook';\r\n\r\n  colors = [new ColorModel('#A4A5A7', true), new ColorModel('#00000', false)];\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host{\n    background-color: black;\n}",
+                    "data": ":host{\r\n    background-color: black;\r\n}",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<!-- <div style=\"margin-left: 10em\">\n    <app-color-picker-dropdown label=\"Color\" [model]=\"colors\"></app-color-picker-dropdown>\n</div> -->\n<router-outlet></router-outlet>"
+            "templateData": "<!-- <div style=\"margin-left: 10em\">\r\n    <app-color-picker-dropdown label=\"Color\" [model]=\"colors\"></app-color-picker-dropdown>\r\n</div> -->\r\n<router-outlet></router-outlet>"
         },
         {
             "name": "CheckmarkComponent",
@@ -652,13 +652,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-f92564a88678ec59fcd3885a7e8943ba26cd4ddb2e6d87a1ec3075e1c43ff6c606900fa8bf414fd694873300b551d1cdcbd29999009778c60dff342c28473ae9",
+            "id": "module-AppModule-20a21f723711f94c16c8ae11acd08aa24a96b7504e7b9a9ba82eca191afe6b53816648ab6bc1f84a27a1a7912605cad20f240cf87ecd6e0c2311752660924bd8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { NgbModule } from '@ng-bootstrap/ng-bootstrap';\nimport { ColorPickerDropdownComponent } from 'src/color/color-picker/color-picker-dropdown.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    NgbModule,\n    ColorPickerDropdownComponent  \n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { NgbModule } from '@ng-bootstrap/ng-bootstrap';\r\nimport { ColorPickerDropdownComponent } from 'src/color/color-picker/color-picker-dropdown.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    NgbModule,\r\n    ColorPickerDropdownComponent  \r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -703,13 +703,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -748,7 +748,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n}"
+                "defaultValue": "{\r\n}"
             },
             {
                 "name": "colors",
@@ -758,7 +758,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n      new ColorModel('#FFE4C4', true), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', false),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+                "defaultValue": "[\r\n      new ColorModel('#FFE4C4', true), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', false),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n      new ColorModel('#05CC33', false),\r\n\r\n    ]"
             },
             {
                 "name": "colors",
@@ -768,7 +768,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+                "defaultValue": "[\r\n      new ColorModel('#FFE4C4', false), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', true),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n    ]"
             },
             {
                 "name": "FilledColourButton",
@@ -778,7 +778,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    color: '#95C533',\n    isSelected: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const element = canvas.getByRole('checkmark');\n\n    await expect(element).toBeInTheDocument();\n  }\n}"
+                "defaultValue": "{\r\n  args: {\r\n    color: '#95C533',\r\n    isSelected: true,\r\n  },\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const element = canvas.getByRole('checkmark');\r\n\r\n    await expect(element).toBeInTheDocument();\r\n  }\r\n}"
             },
             {
                 "name": "meta",
@@ -788,7 +788,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CheckmarkComponent>",
-                "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
+                "defaultValue": "{\r\n  title: 'Basic/Checkmark',\r\n  component: CheckmarkComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
@@ -798,7 +798,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorButtonComponent>",
-                "defaultValue": "{\n  title: 'Color/Button',\n  component: ColorButtonComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
+                "defaultValue": "{\r\n  title: 'Color/Button',\r\n  component: ColorButtonComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
@@ -808,7 +808,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorsGridComponent>",
-                "defaultValue": "{\n  title: 'Color/Grid',\n  component: ColorsGridComponent,\n  tags: ['autodocs'],\n}"
+                "defaultValue": "{\r\n  title: 'Color/Grid',\r\n  component: ColorsGridComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -818,7 +818,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorPickerDropdownComponent>",
-                "defaultValue": "{\n  title: 'Color/Picker',\n  component: ColorPickerDropdownComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div>${story}</div>`)\n  ],\n}"
+                "defaultValue": "{\r\n  title: 'Color/Picker',\r\n  component: ColorPickerDropdownComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div>${story}</div>`)\r\n  ],\r\n}"
             },
             {
                 "name": "multipleColorsGrid",
@@ -828,7 +828,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    colors: colors,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "multipleColorsPicker",
@@ -838,7 +838,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n    label: 'Color',\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "preview",
@@ -848,7 +848,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/,\r\n      },\r\n    },\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -909,7 +909,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n}"
+                    "defaultValue": "{\r\n}"
                 },
                 {
                     "name": "meta",
@@ -919,7 +919,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CheckmarkComponent>",
-                    "defaultValue": "{\n  title: 'Basic/Checkmark',\n  component: CheckmarkComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
+                    "defaultValue": "{\r\n  title: 'Basic/Checkmark',\r\n  component: CheckmarkComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\r\n  ],\r\n}"
                 }
             ],
             "src/stories/color-grid.stories.ts": [
@@ -931,7 +931,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n      new ColorModel('#FFE4C4', true), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', false),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+                    "defaultValue": "[\r\n      new ColorModel('#FFE4C4', true), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', false),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n      new ColorModel('#05CC33', false),\r\n\r\n    ]"
                 },
                 {
                     "name": "meta",
@@ -941,7 +941,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ColorsGridComponent>",
-                    "defaultValue": "{\n  title: 'Color/Grid',\n  component: ColorsGridComponent,\n  tags: ['autodocs'],\n}"
+                    "defaultValue": "{\r\n  title: 'Color/Grid',\r\n  component: ColorsGridComponent,\r\n  tags: ['autodocs'],\r\n}"
                 },
                 {
                     "name": "multipleColorsGrid",
@@ -951,7 +951,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    colors: colors,\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n}"
                 }
             ],
             "src/stories/color-picker.stories.ts": [
@@ -963,7 +963,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n      new ColorModel('#FFE4C4', false), \n      new ColorModel('#FA9ACD', false),\n      new ColorModel('#DB7093', false),\n      new ColorModel('#FF00FF', false),\n      new ColorModel('#C71585', false),\n      new ColorModel('#800080', false),\n      new ColorModel('#4B1182', false),\n      new ColorModel('#CBE399', true),\n      new ColorModel('#9ACC9A', false),\n      new ColorModel('#95C533', false),\n    ]"
+                    "defaultValue": "[\r\n      new ColorModel('#FFE4C4', false), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', true),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n    ]"
                 },
                 {
                     "name": "meta",
@@ -973,7 +973,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ColorPickerDropdownComponent>",
-                    "defaultValue": "{\n  title: 'Color/Picker',\n  component: ColorPickerDropdownComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div>${story}</div>`)\n  ],\n}"
+                    "defaultValue": "{\r\n  title: 'Color/Picker',\r\n  component: ColorPickerDropdownComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div>${story}</div>`)\r\n  ],\r\n}"
                 },
                 {
                     "name": "multipleColorsPicker",
@@ -983,7 +983,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    colors: colors,\n    label: 'Color',\n  },\n  parameters: {\n    backgrounds: {\n      default: 'dark',\n      values: [\n        { name: 'dark', value: '#363636' },\n      ],\n    },\n  },\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n    label: 'Color',\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n}"
                 }
             ],
             "src/stories/color-button.stories.ts": [
@@ -995,7 +995,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    color: '#95C533',\n    isSelected: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const element = canvas.getByRole('checkmark');\n\n    await expect(element).toBeInTheDocument();\n  }\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    color: '#95C533',\r\n    isSelected: true,\r\n  },\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const element = canvas.getByRole('checkmark');\r\n\r\n    await expect(element).toBeInTheDocument();\r\n  }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1005,7 +1005,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ColorButtonComponent>",
-                    "defaultValue": "{\n  title: 'Color/Button',\n  component: ColorButtonComponent,\n  tags: ['autodocs'],\n  decorators: [\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\n  ],\n}"
+                    "defaultValue": "{\r\n  title: 'Color/Button',\r\n  component: ColorButtonComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div style=\"width: 25%; height: 25%\">${story}</div>`)\r\n  ],\r\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -1017,7 +1017,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/,\r\n      },\r\n    },\r\n  },\r\n}"
                 }
             ]
         },

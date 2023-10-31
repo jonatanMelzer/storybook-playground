@@ -25,6 +25,8 @@ const colors =
       new ColorModel('#CBE399', false),
       new ColorModel('#9ACC9A', false),
       new ColorModel('#95C533', false),
+      new ColorModel('#05CC33', false),
+
     ];
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const multipleColorsGrid: Story = {
