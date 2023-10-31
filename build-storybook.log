@@ -1,6 +1,6 @@
 
 > storybook@0.0.0 build-storybook
-> ng run storybook:build-storybook --output-dir C:\Users\jmelzer\AppData\Local\Temp\chromatic--3960-8EfrVf8Oev23
+> ng run storybook:build-storybook --output-dir C:\Users\jmelzer\AppData\Local\Temp\chromatic--2596-P5mj4tqsj3jw
 
 [0m
 [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
@@ -25,161 +25,161 @@ Node.js version : v16.17.0
 
 Operating system : Windows 10
 
-[16:41:36] No configuration file found, switching to CLI flags.
-[16:41:36] Using tsconfig file : D:\@work\Repos\playground\storybook-playground\.storybook\tsconfig.json
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/.storybook/preview.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/favicon.ico
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/index.html
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/main.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/styles.scss
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/app/app-routing.module.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/app/app.component.html
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/app/app.component.scss
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/app/app.component.ts
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/app/app.module.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/checkmark/checkmark.component.scss
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/checkmark/checkmark.component.ts
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/checkmark.stories.ts
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/color-button.stories.ts
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/color-grid.stories.ts
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/color-picker.stories.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.html
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.scss
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.html
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.scss
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.ts
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/color/model/color.model.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.html
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.scss
-[16:41:36] Including      : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.ts
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/accessibility.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/accessibility.svg
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/addon-library.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/assets.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/context.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/discord.svg
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/docs.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/figma-plugin.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/github.svg
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/share.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/styling.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/testing.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/theming.png
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/tutorials.svg
-[16:41:36] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/youtube.svg
-[16:41:36] Searching package.json file
-[16:41:36] package.json file found
-[16:41:36] Processing package.json dependencies
-[16:41:36] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
-[16:41:36] README.md file found
-[16:41:36] Error during D:\@work\Repos\playground\storybook-playground\CHANGELOG read
-[16:41:36] Continuing without CHANGELOG.md file
-[16:41:36] Error during D:\@work\Repos\playground\storybook-playground\CONTRIBUTING read
-[16:41:36] Continuing without CONTRIBUTING.md file
-[16:41:36] Error during D:\@work\Repos\playground\storybook-playground\LICENSE read
-[16:41:36] Continuing without LICENSE.md file
-[16:41:36] Error during D:\@work\Repos\playground\storybook-playground\TODO read
-[16:41:36] Continuing without TODO.md file
-[16:41:36] Get dependencies data
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/.storybook/preview.ts
-[16:41:36] found          : preview
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/main.ts
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/app/app-routing.module.ts
-[16:41:36] Analysing routes definitions and clean them if necessary
-[16:41:36] found          : AppRoutingModule
-[16:41:36]                : - imports:
-[16:41:36]                : 	- RouterModule
-[16:41:36]                : - exports:
-[16:41:36]                : 	- RouterModule
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/app/app.component.ts
-[16:41:36] found          : AppComponent
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/app/app.module.ts
-[16:41:36] found          : AppModule
-[16:41:36]                : - imports:
-[16:41:36]                : 	- BrowserModule
-[16:41:36]                : 	- AppRoutingModule
-[16:41:36]                : 	- NgbModule
-[16:41:36]                : 	- ColorPickerDropdownComponent
-[16:41:36]                : - declarations:
-[16:41:36]                : 	- AppComponent
-[16:41:36]                : - bootstrap:
-[16:41:36]                : 	- AppComponent
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/checkmark/checkmark.component.ts
-[16:41:36] found          : CheckmarkComponent
-[16:41:36]                : - imports:
-[16:41:36]                : 	- CommonModule
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/checkmark.stories.ts
-[16:41:36] found          : meta
-[16:41:36] found          : Story
-[16:41:36] found          : Checkmark
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/color-button.stories.ts
-[16:41:36] found          : meta
-[16:41:36] found          : Story
-[16:41:36] found          : FilledColourButton
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/color-grid.stories.ts
-[16:41:36] found          : meta
-[16:41:36] found          : Story
-[16:41:36] found          : colors
-[16:41:36] found          : multipleColorsGrid
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/color-picker.stories.ts
-[16:41:36] found          : meta
-[16:41:36] found          : Story
-[16:41:36] found          : colors
-[16:41:36] found          : multipleColorsPicker
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.ts
-[16:41:36] found          : ColorButtonComponent
-[16:41:36]                : - imports:
-[16:41:36]                : 	- CommonModule
-[16:41:36]                : 	- CheckmarkComponent
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.ts
-[16:41:36] found          : ColorsGridComponent
-[16:41:36]                : - imports:
-[16:41:36]                : 	- CommonModule
-[16:41:36]                : 	- ColorButtonComponent
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/model/color.model.ts
-[16:41:36] found          : IColorModel
-[16:41:36] found          : ColorModel
-[16:41:36] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.ts
-[16:41:36] found          : ColorPickerDropdownComponent
-[16:41:36]                : - imports:
-[16:41:36]                : 	- CommonModule
-[16:41:36]                : 	- ColorsGridComponent
-[16:41:36]                : 	- NgbDropdownModule
-[16:41:36]                : 	- MatIconModule
-[16:41:36] -------------------
-[16:41:36] Project statistics 
-[16:41:36] - files      : 15
-[16:41:36] - module     : 2
-[16:41:36] - component  : 5
-[16:41:36] - class      : 1
-[16:41:36] - interface  : 1
-[16:41:36] -------------------
-[16:41:36] Prepare components
-[16:41:36]  AppComponent has a templateUrl, include it
-[16:41:36]  AppComponent has styleUrls, include them
-[16:41:36]  CheckmarkComponent has styleUrls, include them
-[16:41:36]  ColorButtonComponent has a templateUrl, include it
-[16:41:36]  ColorButtonComponent has styleUrls, include them
-[16:41:36]  ColorPickerDropdownComponent has a templateUrl, include it
-[16:41:36]  ColorPickerDropdownComponent has styleUrls, include them
-[16:41:36]  ColorsGridComponent has a templateUrl, include it
-[16:41:36]  ColorsGridComponent has styleUrls, include them
-[16:41:36] Prepare modules
-[16:41:36] Process routes
-[16:41:36] Prepare classes
-[16:41:36] Prepare interfaces
-[16:41:36] Prepare miscellaneous
-[16:41:36] Process documentation coverage report
-[16:41:36] Generating documentation in export format json
-[16:41:36] Documentation generated in ./ in 0.377 seconds
-info => Cleaning outputDir: C:\Users\jmelzer\AppData\Local\Temp\chromatic--3960-8EfrVf8Oev23
+[16:51:51] No configuration file found, switching to CLI flags.
+[16:51:51] Using tsconfig file : D:\@work\Repos\playground\storybook-playground\.storybook\tsconfig.json
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/.storybook/preview.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/favicon.ico
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/index.html
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/main.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/styles.scss
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/app/app-routing.module.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/app/app.component.html
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/app/app.component.scss
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/app/app.component.ts
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/app/app.module.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/checkmark/checkmark.component.scss
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/checkmark/checkmark.component.ts
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/checkmark.stories.ts
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/color-button.stories.ts
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/color-grid.stories.ts
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/stories/color-picker.stories.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.html
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.scss
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.html
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.scss
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.html
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.scss
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.ts
+[16:51:51] Including      : D:/@work/Repos/playground/storybook-playground/src/color/model/color.model.ts
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/accessibility.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/accessibility.svg
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/addon-library.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/assets.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/context.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/discord.svg
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/docs.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/figma-plugin.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/github.svg
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/share.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/styling.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/testing.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/theming.png
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/tutorials.svg
+[16:51:51] Excluding      : D:/@work/Repos/playground/storybook-playground/src/stories/assets/youtube.svg
+[16:51:51] Searching package.json file
+[16:51:51] package.json file found
+[16:51:51] Processing package.json dependencies
+[16:51:51] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[16:51:51] README.md file found
+[16:51:51] Error during D:\@work\Repos\playground\storybook-playground\CHANGELOG read
+[16:51:51] Continuing without CHANGELOG.md file
+[16:51:51] Error during D:\@work\Repos\playground\storybook-playground\CONTRIBUTING read
+[16:51:51] Continuing without CONTRIBUTING.md file
+[16:51:51] Error during D:\@work\Repos\playground\storybook-playground\LICENSE read
+[16:51:51] Continuing without LICENSE.md file
+[16:51:51] Error during D:\@work\Repos\playground\storybook-playground\TODO read
+[16:51:51] Continuing without TODO.md file
+[16:51:51] Get dependencies data
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/.storybook/preview.ts
+[16:51:51] found          : preview
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/main.ts
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/app/app-routing.module.ts
+[16:51:51] Analysing routes definitions and clean them if necessary
+[16:51:51] found          : AppRoutingModule
+[16:51:51]                : - imports:
+[16:51:51]                : 	- RouterModule
+[16:51:51]                : - exports:
+[16:51:51]                : 	- RouterModule
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/app/app.component.ts
+[16:51:51] found          : AppComponent
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/app/app.module.ts
+[16:51:51] found          : AppModule
+[16:51:51]                : - imports:
+[16:51:51]                : 	- BrowserModule
+[16:51:51]                : 	- AppRoutingModule
+[16:51:51]                : 	- NgbModule
+[16:51:51]                : 	- ColorPickerDropdownComponent
+[16:51:51]                : - declarations:
+[16:51:51]                : 	- AppComponent
+[16:51:51]                : - bootstrap:
+[16:51:51]                : 	- AppComponent
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/checkmark/checkmark.component.ts
+[16:51:51] found          : CheckmarkComponent
+[16:51:51]                : - imports:
+[16:51:51]                : 	- CommonModule
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/checkmark.stories.ts
+[16:51:51] found          : meta
+[16:51:51] found          : Story
+[16:51:51] found          : Checkmark
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/color-button.stories.ts
+[16:51:51] found          : meta
+[16:51:51] found          : Story
+[16:51:51] found          : FilledColourButton
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/color-grid.stories.ts
+[16:51:51] found          : meta
+[16:51:51] found          : Story
+[16:51:51] found          : colors
+[16:51:51] found          : multipleColorsGrid
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/stories/color-picker.stories.ts
+[16:51:51] found          : meta
+[16:51:51] found          : Story
+[16:51:51] found          : colors
+[16:51:51] found          : multipleColorsPicker
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/color-button/color-button.component.ts
+[16:51:51] found          : ColorButtonComponent
+[16:51:51]                : - imports:
+[16:51:51]                : 	- CommonModule
+[16:51:51]                : 	- CheckmarkComponent
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/color-picker/color-picker-dropdown.component.ts
+[16:51:51] found          : ColorPickerDropdownComponent
+[16:51:51]                : - imports:
+[16:51:51]                : 	- CommonModule
+[16:51:51]                : 	- ColorsGridComponent
+[16:51:51]                : 	- NgbDropdownModule
+[16:51:51]                : 	- MatIconModule
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/colors-grid/colors-grid.component.ts
+[16:51:51] found          : ColorsGridComponent
+[16:51:51]                : - imports:
+[16:51:51]                : 	- CommonModule
+[16:51:51]                : 	- ColorButtonComponent
+[16:51:51] parsing        : D:/@work/Repos/playground/storybook-playground/src/color/model/color.model.ts
+[16:51:51] found          : IColorModel
+[16:51:51] found          : ColorModel
+[16:51:51] -------------------
+[16:51:51] Project statistics 
+[16:51:51] - files      : 15
+[16:51:51] - module     : 2
+[16:51:51] - component  : 5
+[16:51:51] - class      : 1
+[16:51:51] - interface  : 1
+[16:51:51] -------------------
+[16:51:51] Prepare components
+[16:51:51]  AppComponent has a templateUrl, include it
+[16:51:51]  AppComponent has styleUrls, include them
+[16:51:51]  CheckmarkComponent has styleUrls, include them
+[16:51:51]  ColorButtonComponent has a templateUrl, include it
+[16:51:51]  ColorButtonComponent has styleUrls, include them
+[16:51:51]  ColorPickerDropdownComponent has a templateUrl, include it
+[16:51:51]  ColorPickerDropdownComponent has styleUrls, include them
+[16:51:51]  ColorsGridComponent has a templateUrl, include it
+[16:51:51]  ColorsGridComponent has styleUrls, include them
+[16:51:51] Prepare modules
+[16:51:51] Process routes
+[16:51:51] Prepare classes
+[16:51:51] Prepare interfaces
+[16:51:51] Prepare miscellaneous
+[16:51:51] Process documentation coverage report
+[16:51:51] Generating documentation in export format json
+[16:51:51] Documentation generated in ./ in 0.419 seconds
+info => Cleaning outputDir: C:\Users\jmelzer\AppData\Local\Temp\chromatic--2596-P5mj4tqsj3jw
 
 info => Loading presets
 info => Building manager..
-info => Manager built (1.24 s)
+info => Manager built (216 ms)
 info => Compiling preview..
-info => Copying static files: D:\@work\Repos\playground\storybook-playground\node_modules\@storybook\manager\static at C:\Users\jmelzer\AppData\Local\Temp\chromatic--3960-8EfrVf8Oev23\sb-common-assets
+info => Copying static files: D:\@work\Repos\playground\storybook-playground\node_modules\@storybook\manager\static at C:\Users\jmelzer\AppData\Local\Temp\chromatic--2596-P5mj4tqsj3jw\sb-common-assets
 WARN No story files found for the specified pattern: src\**\*.mdx
 info Addon-docs: using MDX2
 info => Using implicit CSS loaders
@@ -301,21 +301,21 @@ info => Using default Webpack5 setup
 <s> [webpack.Progress] 10% building 0/4 entries 1/4 dependencies 0/1 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js
 <s> [webpack.Progress] 10% building 0/4 entries 3/5 dependencies 0/3 modules
-<s> [webpack.Progress] 23% building 1/4 entries 8/21 dependencies 1/8 modules
+<s> [webpack.Progress] 23% building 1/4 entries 9/21 dependencies 4/9 modules
 <s> [webpack.Progress] 35% building 2/4 entries 11/24 dependencies 5/11 modules
 <s> [webpack.Progress] 37% building import loader ./node_modules/@ngtools/webpack/src/ivy/index.js
 <s> [webpack.Progress] 37% building 2/4 entries 23/32 dependencies 6/23 modules
 <s> [webpack.Progress] 37% building import loader ./node_modules/unplugin/dist/webpack/loaders/load.js
-<s> [webpack.Progress] 37% building 2/4 entries 48/62 dependencies 9/39 modules
-<s> [webpack.Progress] 37% building 2/4 entries 93/105 dependencies 17/64 modules
-<s> [webpack.Progress] 37% building 2/4 entries 171/195 dependencies 31/92 modules
-<s> [webpack.Progress] 37% building 2/4 entries 232/300 dependencies 52/110 modules
-<s> [webpack.Progress] 36% building 2/4 entries 400/835 dependencies 55/245 modules
-<s> [webpack.Progress] 37% building 2/4 entries 1083/1100 dependencies 81/534 modules
-<s> [webpack.Progress] 51% building 3/4 entries 1934/1941 dependencies 145/620 modules
-<s> [webpack.Progress] 51% building 3/4 entries 2435/2500 dependencies 565/767 modules
-<s> [webpack.Progress] 51% building 3/4 entries 3166/3170 dependencies 674/1100 modules
-<s> [webpack.Progress] 57% building 3/4 entries 3676/3736 dependencies 1000/1166 modules
+<s> [webpack.Progress] 37% building 2/4 entries 57/77 dependencies 13/40 modules
+<s> [webpack.Progress] 37% building 2/4 entries 75/96 dependencies 14/53 modules
+<s> [webpack.Progress] 37% building 2/4 entries 148/173 dependencies 24/83 modules
+<s> [webpack.Progress] 37% building 2/4 entries 215/229 dependencies 47/107 modules
+<s> [webpack.Progress] 37% building 2/4 entries 811/900 dependencies 57/470 modules
+<s> [webpack.Progress] 37% building 2/4 entries 1330/1400 dependencies 93/547 modules
+<s> [webpack.Progress] 37% building 2/4 entries 2100/2143 dependencies 325/631 modules
+<s> [webpack.Progress] 51% building 3/4 entries 2120/2143 dependencies 328/647 modules
+<s> [webpack.Progress] 51% building 3/4 entries 2605/2700 dependencies 609/867 modules
+<s> [webpack.Progress] 51% building 3/4 entries 3390/3400 dependencies 757/1140 modules
 <s> [webpack.Progress] 65% building 4/4 entries 4026/4026 dependencies 1251/1251 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
@@ -420,18 +420,18 @@ info => Using default Webpack5 setup
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.a3be907717cb628ba0bb.css generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.a3be907717cb628ba0bb.css generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.65ccdcf0.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.65ccdcf0.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.e041a72e.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.e041a72e.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.4e115ff2.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.4e115ff2.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.2dcdfccb.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.2dcdfccb.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-checkmark-stories.f46529fa.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-checkmark-stories.f46529fa.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-button-stories.810cb95a.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-button-stories.810cb95a.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-grid-stories.0a356b95.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-grid-stories.0a356b95.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-picker-stories.ef5aec20.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-picker-stories.ef5aec20.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-grid-stories.df74abd1.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-grid-stories.df74abd1.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-picker-stories.91ede6b8.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin stories-color-picker-stories.91ede6b8.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 432.3af63083.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 432.3af63083.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 195.b4e418fb.iframe.bundle.js generate SourceMap
@@ -477,18 +477,18 @@ info => Using default Webpack5 setup
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.6e01d1afd0cb5f506898.css generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.6e01d1afd0cb5f506898.css generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.0c3af0d8.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.0c3af0d8.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.6fb5b02a.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.6fb5b02a.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.7b0581a3.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.7b0581a3.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.d437e7f8.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.d437e7f8.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-checkmark-stories.8cfa77cb.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-checkmark-stories.8cfa77cb.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-button-stories.0c713e0e.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-button-stories.0c713e0e.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-grid-stories.bc36f175.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-grid-stories.bc36f175.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-picker-stories.8507f7f3.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-picker-stories.8507f7f3.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-picker-stories.6aac74a0.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin stories-color-picker-stories.6aac74a0.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 195.5915492a.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 195.5915492a.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 21.c5c8e52e.iframe.bundle.js generate SourceMap
@@ -553,13 +553,13 @@ WARN   510.e04e83ee.iframe.bundle.js (693 KiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
 WARN   main (2.57 MiB)
-WARN       runtime~main.6fb5b02a.iframe.bundle.js
+WARN       runtime~main.d437e7f8.iframe.bundle.js
 WARN       645.a9007c95.iframe.bundle.js
 WARN       main.6e01d1afd0cb5f506898.css
-WARN       main.0c3af0d8.iframe.bundle.js
+WARN       main.7b0581a3.iframe.bundle.js
 WARN 
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Output directory: C:\Users\jmelzer\AppData\Local\Temp\chromatic--3960-8EfrVf8Oev23
+info => Output directory: C:\Users\jmelzer\AppData\Local\Temp\chromatic--2596-P5mj4tqsj3jw

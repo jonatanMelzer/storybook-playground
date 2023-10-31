@@ -1,7 +1,8 @@
 import { componentWrapperDecorator, type Meta, type StoryObj } from '@storybook/angular';
 import { ColorPickerDropdownComponent } from 'src/color/color-picker/color-picker-dropdown.component';
 import { ColorModel } from 'src/color/model/color.model';
-
+import { userEvent, within } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<ColorPickerDropdownComponent> = {
@@ -44,4 +45,11 @@ export const multipleColorsPicker: Story = {
       ],
     },
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(canvas.getByRole('button'));
+  
+    await expect(canvas.getByRole('matArrowUp')).toBeInTheDocument();
+  }
 };

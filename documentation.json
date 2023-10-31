@@ -768,7 +768,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n      new ColorModel('#FFE4C4', false), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', true),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n    ]"
+                "defaultValue": "[\r\n      new ColorModel('#FFE4C4', false), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', false),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n      new ColorModel('#900000', true),\r\n    ]"
             },
             {
                 "name": "FilledColourButton",
@@ -838,7 +838,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n    label: 'Color',\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n    label: 'Color',\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const element = canvas.getByRole('button');\r\n\r\n    await expect(element).toBeInTheDocument();\r\n  }\r\n}"
             },
             {
                 "name": "preview",
@@ -963,7 +963,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n      new ColorModel('#FFE4C4', false), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', true),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n    ]"
+                    "defaultValue": "[\r\n      new ColorModel('#FFE4C4', false), \r\n      new ColorModel('#FA9ACD', false),\r\n      new ColorModel('#DB7093', false),\r\n      new ColorModel('#FF00FF', false),\r\n      new ColorModel('#C71585', false),\r\n      new ColorModel('#800080', false),\r\n      new ColorModel('#4B1182', false),\r\n      new ColorModel('#CBE399', false),\r\n      new ColorModel('#9ACC9A', false),\r\n      new ColorModel('#95C533', false),\r\n      new ColorModel('#900000', true),\r\n    ]"
                 },
                 {
                     "name": "meta",
@@ -983,7 +983,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n    label: 'Color',\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    colors: colors,\r\n    label: 'Color',\r\n  },\r\n  parameters: {\r\n    backgrounds: {\r\n      default: 'dark',\r\n      values: [\r\n        { name: 'dark', value: '#363636' },\r\n      ],\r\n    },\r\n  },\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const element = canvas.getByRole('button');\r\n\r\n    await expect(element).toBeInTheDocument();\r\n  }\r\n}"
                 }
             ],
             "src/stories/color-button.stories.ts": [

@@ -7,5 +7,81 @@ Authenticating with Chromatic
 Authenticated with Chromatic
     → Using project token '****************4038'
 Retrieving git information
-Skipping build
-    → Skipping rebuild of an already fully passed/accepted build
+Retrieved git information
+    → Commit 'd49a242' on branch 'main'; found 1 parent build
+Collecting Storybook metadata
+Collected Storybook metadata
+    → Storybook 7.4.2 for Angular; using the @storybook/angular builder (7.4.2); supported addons found: Links, Essentials, Interactions
+Initializing build
+Initialized build
+    → Build 3 initialized
+Building your Storybook
+    → Running command: npm run build-storybook -- --output-dir C:\Users\jmelzer\AppData\Local\Temp\chromatic--2596-P5mj4tqsj3jw
+Storybook built in 35 seconds
+    → View build log at D:\@work\Repos\playground\storybook-playground\build-storybook.log
+Publish your built Storybook
+    → Validating Storybook files
+Publishing your built Storybook
+    → Retrieving target location
+    → Starting publish
+    → [                    ] 0%
+    → [=                   ] 5%
+    → [==                  ] 8%
+    → [==                  ] 10%
+    → [==                  ] 11%
+    → [===                 ] 13%
+    → [===                 ] 17%
+    → [====                ] 21%
+    → [=====               ] 23%
+    → [=====               ] 27%
+    → [======              ] 28%
+    → [======              ] 31%
+    → [=======             ] 35%
+    → [========            ] 41%
+    → [==========          ] 51%
+    → [============        ] 58%
+    → [============        ] 61%
+    → [=============       ] 65%
+    → [=============       ] 66%
+    → [=============       ] 67%
+    → [==============      ] 68%
+    → [==============      ] 70%
+    → [==============      ] 71%
+    → [==============      ] 72%
+    → [===============     ] 74%
+    → [===============     ] 76%
+    → [================    ] 78%
+    → [================    ] 81%
+    → [=================   ] 83%
+    → [=================   ] 84%
+    → [=================   ] 86%
+    → [==================  ] 89%
+    → [=================== ] 93%
+    → [=================== ] 94%
+    → [=================== ] 95%
+    → [=================== ] 96%
+    → [=================== ] 97%
+    → [====================] 98%
+    → [====================] 99%
+    → [====================] 100%
+Publish complete in 19 seconds
+    → View your Storybook at https://65411affe51e593b795b9da7-kayvklfaxm.chromatic.com
+Verifying your Storybook
+    → This may take a few minutes
+Started build 3
+    → View build details at https://www.chromatic.com/build?appId=65411affe51e593b795b9da7&number=3
+Running 4 tests
+    → This may take a few minutes
+i Speed up Continuous Integration
+Your project is linked to GitHub so Chromatic will report results there.
+This means you can pass the --exit-once-uploaded flag to skip waiting for build results.
+Read more here: https://www.chromatic.com/docs/cli#chromatic-options
+    → [=====               ] 1/4  Checkmark › Checkmark 
+    → [==========          ] 2/4  Button › Filled Colour Button 
+    → [===============     ] 3/4  Grid › Multiple Colors Grid 
+    → [====================] 4/4  Picker › Multiple Colors Picker 
+× Found 1 visual change: Review the changes at https://www.chromatic.com/build?appId=65411affe51e593b795b9da7&number=3
+
+i For CI/CD use cases, this command failed with exit code 1
+Pass --exit-zero-on-changes to succeed this command regardless of changes.
+Pass --auto-accept-changes to succeed and automatically accept any changes.

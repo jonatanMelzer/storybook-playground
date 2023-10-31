@@ -15,8 +15,8 @@
           [ngStyle]="{ 'background-color': selectedColor?.color }"
         ></div>      
     </div>
-    <mat-icon class="color-picker__arrow" *ngIf="isOpened" fontIcon="expand_less"></mat-icon>
-    <mat-icon class="color-picker__arrow" *ngIf="!isOpened" fontIcon="expand_more"></mat-icon>
+    <mat-icon role="matArrowUp" class="color-picker__arrow" *ngIf="isOpened" fontIcon="expand_less"></mat-icon>
+    <mat-icon role="matArrowDown" class="color-picker__arrow" *ngIf="!isOpened" fontIcon="expand_more"></mat-icon>
   </button>
   <div
     ngbDropdownMenu
